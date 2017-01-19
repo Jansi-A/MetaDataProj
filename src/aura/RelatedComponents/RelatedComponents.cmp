@@ -1,0 +1,38 @@
+<aura:component implements="flexipage:availableForAllPageTypes" controller="customMeetingControllerNew">
+    <aura:attribute name="meetingRoId" type="String" default=""/> 
+     <aura:attribute name="listOfSelectedOpprtunities" type="String" default=""/> 
+    <aura:attribute name="listOfSelectedContacts" type="String" default="" />
+    <div>
+        <h3 style='font-weight:bold'>Select Opportunities</h3>
+        <p><c:AddOpportunityComponent meetingRowIdOppty="{!v.meetingRoId}" listOfSelectedOpp="{!v.listOfSelectedOpprtunities}"/></p>
+    </div><br/>
+    <div>
+        <h3 style='font-weight:bold'>Select Contacts</h3>
+        <p><c:AddContactComponent meetingRowId="{!v.meetingRoId}" listOfSelectedCon="{!v.listOfSelectedContacts}"  /></p>
+    </div>  
+    
+    <div>
+        <h3 style='font-weight:bold'>Select Cases</h3>
+        <p><c:AddCaseComponent meetingRowId="{!v.meetingRoId}"/></p>
+    </div><br/>
+    <div>
+        <h3 style='font-weight:bold'>Select Tasks</h3>
+        <p><c:AddTaskComponent meetingRowId="{!v.meetingRoId}"/></p>
+    </div><br/>
+    <div>
+        <h3 style='font-weight:bold'>Select Users</h3>
+        <p><c:AddUserComponent meetingRowId="{!v.meetingRoId}"/></p>
+    </div>
+    <br></br><br></br>
+    <ui:button label="Save" press="{!c.associateMeetingToObjects}" />
+    
+    <!--<br></br><br></br>
+	Selected Opprotunities: <ui:outputText value="{!v.listOfSelectedOpprtunities}"  />
+	<br></br><br></br>
+    
+    <br></br><br></br>
+	Selected Contacts: <ui:outputText value="{!v.listOfSelectedOpprtunities}"  />
+	<br></br><br></br> -->
+       	
+
+</aura:component>

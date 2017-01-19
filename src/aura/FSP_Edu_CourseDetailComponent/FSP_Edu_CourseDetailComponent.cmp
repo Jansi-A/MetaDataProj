@@ -1,0 +1,349 @@
+<aura:component implements="flexipage:availableForAllPageTypes" >
+    
+	<ltng:require styles="/resource/fsp_bootstrap_css"/>
+    <ltng:require styles="/resource/fsp_dashboard_css"/>
+	<ltng:require styles="/resource/fsp_demo"/>
+    <ltng:require styles="/resource/fsp_font_awesome_min"/>
+    <ltng:require styles="/resource/fsp_fonts_googleapis_css"/>
+    <ltng:require styles="/resource/fsp_pe_icon_7_stroke"/>
+    <ltng:require styles="/resource/component_css"/>
+    <ltng:require scripts="/resource/JQuery,/resource/FSP_bootstrapJs,/resource/moment_min_js,
+                           resource/fullcalender_V3_js,/resource/jquery_sharrre_js,resource/demo_js"
+   afterScriptsLoaded="{!c.doInit}" />
+  <!--   <ltng:require scripts="/resource/modernizr_custom_js"  
+                      afterScriptsLoaded="{!c.doInit}" /> -->
+    
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+   
+    <aura:attribute name="courseId" type="String"/>
+
+   
+    <div class="fsp">
+	
+	
+	<div class="chute chute-center">
+
+
+		<div class="panel">
+
+
+			<div class="panel-body pn">
+
+
+				<div class="row">
+
+					<div class="">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="row">
+									<div class="col-md-12 col-sm-12">
+
+										<ol class="breadcrumb titlefont">
+											<li><img
+												style="margin-left: 8px; margin-right: 11px; width: 29px; margin-top: -8px;"
+                                                     src="/resource/mortarboard_png"></img><a
+												href="course_details.html">Bachelor of Business</a></li>
+											<li><img
+												style="margin-left: 8px; margin-right: 7px; width: 20px; margin-top: -8px;"
+												src="/resource/placeholder_png"></img><a
+												href="campus_details.html">Sydney</a></li>
+											<li class="active"><img
+												style="margin-left: 8px; margin-right: 7px; width: 20px; margin-top: -8px;"
+												src="/resource/school_campus_png"></img><a
+												href="university_details.html">Sydney university</a></li>
+
+
+											<button type="button"
+												onclick="demo.showNotification('top','right')"
+												class="btn pull-right btn-fill btn-success bredcrum-app-btn">
+												<span class="btn-label"> <i class="fa fa-plus"></i>
+												</span> Add to Application
+											</button>
+										</ol>
+
+
+                                        <br></br>
+										<p>The Bachelor of Business is a program for students
+											intending to pursue careers in general management or Human
+											Resource Management in large businesses or government
+											organisations. The focus of much of the curriculum is on
+											human and organisational relationships and structure.</p>
+										<p>Aside from undertaking a general Bachelor of Business,
+											you may elect to undertake a specialisation in either Human
+											Resource Management, Marketing, Organisational Management and
+											Leadership or Tourism. A feature of the program is the group
+											of practical business placements and projects courses that
+											are available.</p>
+
+										<p>This flexible degree structure allows up to one-third
+											of the program to be selected from other degree programs,
+											including management, marketing, human resource management,
+											tourism, Asian studies and languages, psychology, arts and
+											mathematics as electives.</p>
+
+									</div>
+
+								</div>
+
+
+							</div>
+
+
+						</div>
+
+
+						<div class="row">
+							<div class="container">
+
+
+
+								<div id="cbp-fwslider" class="cbp-fwslider">
+									<ul>
+										<li>
+
+											<div class="videoWrapper">
+												<!-- Copy & Pasted from YouTube -->
+												<iframe width="560" height="349"
+													src="https://www.youtube.com/embed/jdGP8rcEJls"
+													frameborder="0" allowfullscreen="true"></iframe>
+											</div>
+
+										</li>
+										<li>
+											<p class="text-center">
+                                                <img src="../assets/img/students.jpg" height="400"></img>
+											</p>
+										</li>
+										<li>
+											<div class="videoWrapper">
+												<!-- Copy & Pasted from YouTube -->
+												<iframe width="560" height="349"
+													src="https://www.youtube.com/embed/jdGP8rcEJls"
+													frameborder="0" allowfullscreen="true"></iframe>
+											</div>
+										</li>
+										<li>
+											<div class="videoWrapper">
+												<!-- Copy & Pasted from YouTube -->
+												<iframe width="560" height="349"
+													src="https://www.youtube.com/embed/jdGP8rcEJls"
+													frameborder="0" allowfullscreen="true"></iframe>
+											</div>
+										</li>
+										<li>
+											<div class="videoWrapper">
+												<!-- Copy & Pasted from YouTube -->
+												<iframe width="560" height="349"
+													src="https://www.youtube.com/embed/jdGP8rcEJls"
+													frameborder="0" allowfullscreen="true"></iframe>
+											</div>
+										</li>
+									</ul>
+								</div>
+
+
+							</div>
+
+						</div>
+						<br></br>
+						<div class="">
+
+							<div class="col-md-12 ">
+
+								<div class="nav-container">
+									<ul class="nav nav-icons" role="tablist">
+										<li class="active"><a href="#description-logo" role="tab"
+                                                              data-toggle="tab"> <i class="fa fa-info-circle"></i><br></br>
+												Fee Details
+										</a></li>
+
+									</ul>
+								</div>
+
+								<div class="tab-content">
+									<div class="tab-pane active" id="description-logo">
+										<div class="card">
+											<table class="table table-hover table-striped">
+												<thead>
+													<tr>
+														<th>Qualification</th>
+														<th>Term</th>
+														<th>Start Date</th>
+														<th>End Date</th>
+														<th>Capacity</th>
+														<th>Availabilty</th>
+														<th>Number of Semesters</th>
+														<th>Total Fees</th>
+
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+                                                        <td rowspan="3">TOEFEL : 500/<br> </br>SAT : 300/<br></br>
+															ABCD : 200
+														</td>
+														<td style="padding-left: 15px;">Spring 2016</td>
+														<td>01-Jan-16</td>
+														<td>01-Jan-16</td>
+														<td>100</td>
+														<td>3</td>
+														<td>8</td>
+														<td>$19,100</td>
+
+													</tr>
+													<tr>
+														<td>Winter 2016</td>
+														<td>01-Jan-16</td>
+														<td>01-Jan-16</td>
+														<td>100</td>
+														<td>45</td>
+														<td>8</td>
+														<td>$16,800</td>
+
+													</tr>
+													<tr>
+														<td>2013</td>
+														<td>01-Jan-16</td>
+														<td>01-Jan-16</td>
+														<td>100</td>
+														<td>100</td>
+														<td>8</td>
+														<td>$16,000</td>
+
+													</tr>
+
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+
+
+									<div class="tab-pane" id="map-logo">
+										<div class="card">
+											<table class="table table-hover table-striped">
+												<thead>
+													<tr>
+														<th>Year</th>
+														<th>LTS Overall Band</th>
+														<th>TOEFEL Internet</th>
+														<th>TOEFEL Paper</th>
+
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>2015</td>
+														<td>4.00</td>
+														<td>80.00</td>
+														<td>80.00</td>
+
+													</tr>
+													<tr>
+														<td>2014</td>
+														<td>89.00</td>
+														<td>82.00</td>
+														<td>82.00</td>
+
+													</tr>
+													<tr>
+														<td>2013</td>
+														<td>02.00</td>
+														<td>84.00</td>
+														<td>84.00</td>
+
+													</tr>
+													<tr>
+														<td>2012</td>
+														<td>56.00</td>
+														<td>84.00</td>
+														<td>84.00</td>
+
+													</tr>
+
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+
+
+									<div class="tab-pane" id="legal-logo">
+										<div class="card">
+											<table class="table table-hover table-striped">
+												<thead>
+													<tr>
+														<th>Class</th>
+														<th>Seats</th>
+
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Spring2015</td>
+														<td>03</td>
+
+													</tr>
+													<tr>
+														<td>Autumn 2015</td>
+														<td>29</td>
+
+													</tr>
+													<tr>
+														<td>Summer 2015</td>
+														<td>46</td>
+
+													</tr>
+
+												</tbody>
+											</table>
+										</div>
+									</div>
+
+									<div class="tab-pane" id="help-logo">
+										<div class="card">
+											<div class="header">
+												<h4 class="title">Help center</h4>
+
+											</div>
+
+											<div class="content">
+												<p>
+													<a href="https://federation.edu.au/" target="_blank">www.federation.edu.au</a>
+												</p>
+
+											</div>
+										</div>
+									</div>
+
+								</div>
+								<!-- end tab content -->
+
+							</div>
+							<!-- end col-md-8 -->
+
+						</div>
+                        <br></br> <br></br>
+						<!-- <form action="student_details.html"><button class="btn btn-success btn-fill btn-wd">Apply Now</button></form> -->
+                        <br></br>
+						<button type="button" class="btn pull-right btn-fill btn-success"
+							onclick="demo.showNotification('top','right')">
+							<span class="btn-label"> <i class="fa fa-plus"></i>
+							</span> Add to Application
+						</button>
+
+					</div>
+				</div>
+
+
+
+
+
+			</div>
+		</div>
+	</div>
+    </div>    
+   
+</aura:component>

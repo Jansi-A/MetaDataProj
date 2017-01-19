@@ -1,0 +1,4 @@
+<apex:page standardController="Account">
+<!--  Comment by ajansi 13 Jan 2017 -->
+    <apex:detail /> 
+</apex:page>

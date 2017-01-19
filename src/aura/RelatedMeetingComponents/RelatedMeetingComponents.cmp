@@ -1,0 +1,15 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <aura:attribute name="meetingInternalRoId" type="String" default=""/>   
+    <div>
+        <h3 style='font-weight:bold'>Add Opportunities</h3>
+        <p><c:AddOpportunityComponent meetingIntRowIdOppty="{!v.meetingInternalRoId}"/></p>
+    </div><br/>
+    <div>
+        <h3 style='font-weight:bold'>Add Contacts</h3>
+        <p><c:AddContactComponent meetingIntRowIdContact="{!v.meetingInternalRoId}"/></p>
+    </div><br/>
+    <div>
+        <h3 style='font-weight:bold'>Add Cases</h3>
+        <p><c:AddCaseComponent meetingIntRowIdCase="{!v.meetingInternalRoId}"/></p>
+    </div><br/>
+</aura:component>

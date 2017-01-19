@@ -1,0 +1,42 @@
+<apex:page standardController="Opportunity" extensions="CurrentRecordIdDemoController">
+    <apex:variable var="isDisplayBrowseFile" value="yes" />
+	<!--<apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection title="Current account record Id is : {!currentRecordId}" collapsible="false">
+                <apex:outputField value="{!opp.name}"/>
+                <input id="theHiddenInput" type="hidden" name="theHiddenInput" value="{!currentRecordId}"/>
+                
+            </apex:pageBlockSection> -->
+            <!--  <apex:outputPanel id="thePageBlock" rendered="{!(isDisplayBrowseFile == 'no')}">
+				<apex:commandButton action="{!view}" value="redirect" />
+				</apex:outputPanel> -->
+       <!-- </apex:pageBlock>
+    </apex:form> -->
+    <!-- <apex:outputPanel id="thePageBlock" rendered="{!(isDisplayBrowseFile == 'yes')}"> -->
+    <!--  Including Lightning Component START-->
+    
+    <apex:includeScript value="/lightning/lightning.out.js" />
+
+    <script>
+        $Lightning.use("c:uploadFileApp", function() {
+            $Lightning.createComponent(
+                "c:uploadFile",
+                {"oppId" : "{!currentRecordId}",
+                "isDisplayBrowseFile" : "yes"},
+                
+                "theuploadDiv",
+                function(cmp) {
+                    console.log("Component created!");
+                    console.log(cmp);
+                });
+            });
+    </script>
+    
+    <div id="theuploadDiv"></div>
+    
+     <!--  Including Lightning Component END-->
+    
+    <!-- </apex:outputPanel> -->
+    
+
+</apex:page>

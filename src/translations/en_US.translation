@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customApplications>
+        <label><!-- Festivals --></label>
+        <name>Festivals</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- Fund Raising --></label>
+        <name>Fund_Raising</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- Garage --></label>
+        <name>Garage</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- Lightning --></label>
+        <name>Lightning</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- Recruitment Console --></label>
+        <name>Recruitment_Console</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- Test5 --></label>
+        <name>Test5</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- Vehicle --></label>
+        <name>Vehicle</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- Vehicle Lightning --></label>
+        <name>Vehicle_Lightning</name>
+    </customApplications>
+    <customLabels>
+        <label><!-- Hello --></label>
+        <name>Hello</name>
+    </customLabels>
+    <customTabs>
+        <label><!-- Custom App Page1 --></label>
+        <name>Custom_App_Page1</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Custom Web Tab --></label>
+        <name>Custom_Web_Tab</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Education Search --></label>
+        <name>Education_Search</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- FSP --></label>
+        <name>FSP</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- FSP UI --></label>
+        <name>FSP_UI</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- FSP_V2 --></label>
+        <name>FSP_V2</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- L1 --></label>
+        <name>L1</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Meeting App --></label>
+        <name>Meeting_App</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Create Meeting --></label>
+        <name>Meeting_App_1</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- My Expenses --></label>
+        <name>My_Expenses</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- My Meetings --></label>
+        <name>My_Meetings</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- FSP for Education --></label>
+        <name>My_Own_Events</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Quick Account --></label>
+        <name>Quick_Account</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Quote Web applet --></label>
+        <name>Quote_Web_applet</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Test --></label>
+        <name>Test</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Test6 --></label>
+        <name>Test6</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Test8 --></label>
+        <name>Test8</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- m1 --></label>
+        <name>m1</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- test10 --></label>
+        <name>test10</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- test8 --></label>
+        <name>test81</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- test --></label>
+        <name>test9</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- vf --></label>
+        <name>vf</name>
+    </customTabs>
+    <globalPicklists>
+        <name>Global_1</name>
+        <picklistValues>
+            <masterLabel>111</masterLabel>
+            <translation><!-- 111 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>22</masterLabel>
+            <translation><!-- 22 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>444</masterLabel>
+            <translation><!-- 444 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>566</masterLabel>
+            <translation><!-- 566 --></translation>
+        </picklistValues>
+    </globalPicklists>
+    <quickActions>
+        <label><!-- Ask Quote --></label>
+        <name>Ask_Quote</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Ask Sample --></label>
+        <name>Ask_Sample</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Meeting --></label>
+        <name>cm</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Account --></label>
+        <name>CreateAccountRecord</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Create Account Action --></label>
+        <name>Create_Account_Action</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Log a Call --></label>
+        <name>Create_Meeting</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- dd --></label>
+        <name>dd</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- End Meeting --></label>
+        <name>End_Meeting</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Finish --></label>
+        <name>Finish</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- LogACall --></label>
+        <name>LogACall</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewAccount --></label>
+        <name>NewAccount</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewCase --></label>
+        <name>NewCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewContact --></label>
+        <name>NewContact</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewEvent --></label>
+        <name>NewEvent</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewGroup --></label>
+        <name>NewGroup</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewLead --></label>
+        <name>NewLead</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewNote --></label>
+        <name>NewNote</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewOpportunity --></label>
+        <name>NewOpportunity</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewTask --></label>
+        <name>NewTask</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Detailed Account --></label>
+        <name>New_Detailed_Account</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity</name>
+    </quickActions>
+    <reportTypes>
+        <description><!-- Opportunities with CustomQuotes with Quote Line Items --></description>
+        <label><!-- Opportunities with CustomQuotes with Quote Line Items --></label>
+        <name>Opportunities_with_CustomQuotes_with_Quote_Line_Items</name>
+        <sections>
+            <label><!-- CustomQuotes --></label>
+            <name>CustomQuotes</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Quote Line Items --></label>
+            <name>Quote Line Items</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- R1 --></description>
+        <label><!-- R1 --></label>
+        <name>R1</name>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+</Translations>

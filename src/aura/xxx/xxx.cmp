@@ -1,0 +1,37 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId,force:appHostable,force:hasSObjectName" 
+                controller="EventRelatedDetails"  >
+    
+    <!--<ltng:require styles="/resource/bootstrapCSS"/>	
+    <ltng:require scripts="/resource/JQuery,/resource/bootstrapJs" afterScriptsLoaded="{!c.doInit}"/> -->
+   <aura:attribute name="recordId" type="String"  />
+   <aura:handler name="init" value="{!this}" action="{!c.doinit}" />
+    <aura:attribute name="showDiv" type="String" default="ShowUniversitiesDiv" />
+    <aura:attribute name="eventId" type="String" />
+    <aura:attribute name="selectedUniversityId" type="String" default=""/>
+    <aura:attribute name="selectedCampusId" type="String" default=""/>
+    <aura:attribute name="selectedProgramId" type="String" default=""/>
+   
+    <c:EducationSearchComponent />
+      <aura:if isTrue="{!v.showDiv=='ShowUniversitiesDiv'}">
+  		<c:listOfUniversitiesComponent eventId="{!v.eventId}" showDiv="{!v.showDiv}" selectedUniversityId="{!v.selectedUniversityId}" />
+        <aura:set attribute="else">
+             <aura:if isTrue="{!v.showDiv=='ShowCampusesDiv'}">
+  				<c:listOfUniversityCampusesComponent eventId="{!v.eventId}" showDiv="{!v.showDiv}" selectedUniversityId="{!v.selectedUniversityId}" selectedCampusId="{!v.selectedCampusId}" />
+        		<aura:set attribute="else">
+                     <aura:if isTrue="{!v.showDiv=='ShowProgramsDiv'}">
+                      <c:listOfProgramsComponent eventId="{!v.eventId}" showDiv="{!v.showDiv}" selectedProgramId="{!v.selectedProgramId}" selectedCampusId="{!v.selectedCampusId}" />
+                     <aura:set attribute="else">
+                      <c:programDetailsComponent eventId="{!v.eventId}" showDiv="{!v.showDiv}" selectedProgramId="{!v.selectedProgramId}" />
+
+        		</aura:set>
+      		</aura:if>
+       
+        		</aura:set>
+      		</aura:if>
+       
+        </aura:set>
+      </aura:if>
+  
+
+
+</aura:component>

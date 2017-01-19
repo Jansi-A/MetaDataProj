@@ -1,0 +1,31 @@
+<aura:component implements="flexipage:availableForAllPageTypes" controller="customMeetingControllerNew">
+    <aura:attribute name="meetingRowId" type="String" default=""/>
+	<aura:attribute name="listOfUser" type="User[]"/>
+    
+	<aura:handler name="init" value="{!this}" action="{!c.getRelatedUser}" />  
+    
+    <table class="slds-table slds-table--bordered slds-table--striped">
+        <thead>
+            <tr class="slds-text-heading--label">
+                <th class="slds-cell-shrink">
+                     <label> <!--class="slds-checkbox"> -->
+                        <!--<input type="checkbox" name="Add" /> -->
+                        <span class="slds-checkbox--faux"></span>
+                        <!--<span class="slds-assistive-text">Select All</span> -->
+                    </label> 
+                </th>
+                <th class="slds-is-sortable slds-is-resizable" scope="col">Alias</th>
+                <th class="slds-is-sortable slds-is-resizable" scope="col">Email nnn</th>
+       >
+        	</tr>
+        </thead>        
+        <aura:iteration var="item" items="{!v.listOfUser}">
+            <tr>
+                <!--<td><ui:outputURL value="{!item.Id}" label="Add"/></td>-->
+                <td><ui:inputCheckbox aura:id="checkbox" label="" change="{!c.onCheck}"/></td>
+            	<td>{!item.Alias}</td>
+                <td>{!item.Email}</td>
+        	</tr>        	
+    	</aura:iteration>
+    </table>
+</aura:component>

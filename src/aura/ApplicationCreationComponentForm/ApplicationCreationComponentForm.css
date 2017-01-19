@@ -1,0 +1,125 @@
+.THIS .spinner-img {
+    opacity:30 !important;
+    background:#fff;
+    
+}
+
+.THIS .unhideElement {
+    display:block;
+}
+
+.THIS .hideElement {
+    display:none;
+}
+
+.THIS .fileinput-button {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.THIS .fileinput-button input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    opacity: 0;
+    -ms-filter: 'alpha(opacity=0)';
+    font-size: 200px !important;
+    direction: ltr;
+    cursor: pointer;
+}
+
+.THIS .btn-success {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+
+.THIS .btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.THIS .glyphicon-plus:before {
+    content: "\2b";
+}
+
+.THIS .glyphicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.THIS table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.THIS table {
+    background-color: transparent;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.THIS tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+.THIS .fade.in {
+    opacity: 1;
+}
+
+.THIS tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+.THIS .btn-warning:hover .btn-warning:focus .btn-warning:active .btn-warning.active .open>.dropdown-toggle.btn-warning {
+    color: #fff;
+    background-color: #ec971f;
+    border-color: #d58512;
+}
+
+.THIS .glyphicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.THIS .btn-warning {
+    color: #fff;
+     background-color: #f0ad4e; 
+     border-color: #eea236; 
+}

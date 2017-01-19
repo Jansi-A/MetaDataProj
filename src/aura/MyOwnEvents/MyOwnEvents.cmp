@@ -1,0 +1,70 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId,force:appHostable" 
+                controller="EventRelatedDetails" >
+	
+    <aura:handler name="init" value="{!this}" action="{!c.doinit}" />
+    
+    <aura:attribute name="events" type="Event[]"/>
+    <aura:attribute name="selectedEvent" type="Event" />
+    <aura:attribute name="isShowEventDetails" type="String" default="false"/>
+    <aura:attribute name="isShowEventStartMeetingCmp" type="String" default="false"/>
+    <aura:attribute name="eventId" type="String" />
+    
+    <aura:if isTrue="{!v.isShowEventStartMeetingCmp=='false'}">
+     <aura:if isTrue="{!v.isShowEventDetails=='false'}">
+             <table class="slds-table slds-table--bordered slds-table--striped slds-table--cell-buffer">
+            <thead>
+              <tr class="slds-text-heading--label">
+                <th scope="col"><span class="slds-truncate">Subject</span></th>
+                <th scope="col"><span class="slds-truncate">Start Date Time</span></th>
+                <th scope="col"><span class="slds-truncate">Lead Name</span></th>
+                <!--<th scope="col"><span class="slds-truncate">Description</span></th> -->
+                <th scope="col"><span class="slds-truncate">Start Meeting</span></th>
+               </tr>
+            </thead>
+            
+            <tbody>
+                <aura:iteration items="{!v.events}" var="obj">
+                    <c:eachEvent event="{!obj}" isShowEventDetails="{!v.isShowEventDetails}" selectedEvent="{!v.selectedEvent}" isShowEventStartMeetingCmp="{!v.isShowEventStartMeetingCmp}" eventId="{!v.eventId}"/>
+                    
+                </aura:iteration>
+            </tbody>
+        
+          </table>
+       <aura:set attribute="else">
+          
+           <div class="slds-card">
+          	 <header class="slds-card__header slds-grid grid--flex-spread">
+                 <h2><b><a href="javascript:void(0);"  onclick="{!c.navigateToRecordDetail}" >{!v.selectedEvent.Subject}</a></b></h2>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);"  onclick="{!c.backToEventList}" >Back to Event List</a>
+			</header>
+           <section class="slds-card__body">
+
+			<div class="slds-tile slds-hint-parent">
+  
+                <p class="slds-truncate"><b>Start Date Time:</b>
+            <ui:outputText value="{!v.selectedEvent.StartDateTime}"/>
+            </p>
+                <p>&nbsp;</p>
+            <p class="slds-truncate"><b>End Date Time:</b>
+            <ui:outputText value="{!v.selectedEvent.EndDateTime}" />
+            </p>
+                <p>&nbsp;</p>
+            <p class="slds-truncate"><b>Location:</b>
+            <ui:outputText value="{!v.selectedEvent.Location}" />
+            </p>
+                <p>&nbsp;</p>
+                <p class="slds-truncate"><b>Description:</b>
+            <ui:outputTextArea value="{!v.selectedEvent.Description}" />
+            </p>
+            </div>
+            </section>
+           </div>
+  		</aura:set>
+    </aura:if>
+    </aura:if>
+    
+    <aura:if isTrue="{!v.isShowEventStartMeetingCmp=='true'}">
+        <c:EventStartMainComonent isShowEventStartMeetingCmp="{!v.isShowEventStartMeetingCmp}" eventId="{!v.eventId}"/>
+    </aura:if>
+    
+</aura:component>

@@ -1,0 +1,10 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId,force:appHostable" 
+                controller="FileController2"  >
+              
+	<aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="isDisplayBrowseFile" type="String" />
+   
+    <aura:attribute name="oppId" type="String" />
+    <input type="file" class="file" aura:id="file" />
+    <ui:button label="Save" press="{!c.save}"/>
+</aura:component>

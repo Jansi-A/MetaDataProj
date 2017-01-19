@@ -1,0 +1,12 @@
+.THIS .unhideElement {
+    display:block;
+    color: red;
+}
+
+.THIS .hideElement {
+    display:none;
+}
+
+.THIS .searchElementHeight {
+    height:2.22rem !important ;
+}

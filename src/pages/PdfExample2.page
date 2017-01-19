@@ -1,0 +1,13 @@
+<apex:page renderAs="pdf" controller="vehiclePDFController"  action="{!MyActionMethod}">
+<head>
+ <style type="text/css">
+ body { font-family: Arial Unicode MS; }
+ </style>
+ </head>
+ <h1>Account Information</h1>
+ Downloading the PDF as .....   
+&nbsp; &nbsp; <apex:detail />
+
+
+
+</apex:page>

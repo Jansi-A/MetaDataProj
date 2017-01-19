@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>CustomQuote</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>CustomQuotes</value>
+    </caseValues>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity__c</name>
+        <relationshipLabel><!-- CustomQuotes --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>CustomQuote Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Sync Products Action --></label>
+        <name>Sync_Products_Action</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Sync_Products --></label>
+        <name>Sync_Products</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Test_Button --></label>
+        <name>Test_Button</name>
+    </webLinks>
+</CustomObjectTranslation>

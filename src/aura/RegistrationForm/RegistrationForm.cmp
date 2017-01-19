@@ -1,0 +1,239 @@
+<aura:component implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global" controller="RegisterController">
+    <aura:attribute name="isSpinnertoLoad"  type="Boolean"  default="false"/> 
+    
+    <!-- Spinner Section ....START .... -->
+    <aura:if isTrue="{!v.isSpinnertoLoad}">
+        <div class="slds-spinner_container">
+          <div class="slds-spinner--brand slds-spinner slds-spinner--medium" role="alert">
+            <span class="slds-assistive-text">Loading</span>
+            <div class="slds-spinner__dot-a"></div>
+            <div class="slds-spinner__dot-b"></div>
+          </div>
+        </div>
+	</aura:if>
+    <!-- Spinner Section ....END .... -->
+    
+        
+    <!-- Registration Form ....START .... -->
+    <form style="background-color:#3372A0">
+        <div class="slds-container--center slds-container--small">
+            <!-- Header ....START .... -->
+             <div class="slds-p-around--xx-large">
+		        <div class="ui-widget" data-allow-move="true" data-allow-select="true" data-allow-rte="false" data-item-id="f9e1a081-e0d3-4f8e-8247-bb1e69a72b42" data-allow-delete="true" data-aura-rendered-by="13:35;a"><div class="communityLogoContainer salesforceIdentityCommunityLogo" data-aura-rendered-by="8:35;a" data-aura-class="salesforceIdentityCommunityLogo"><span data-aura-rendered-by="11:35;a" class="uiImage" data-aura-class="uiImage"><center><img data-aura-rendered-by="9:35;a" src="https://jansi-dev-ed.my.salesforce.com/img/logo198.png"  style="width: 50% !important;" class="communityLogo" alt="Test"/></center></span></div></div>
+                 <div data-aura-rendered-by="18:35;a" class="forceCommunityRichText" data-aura-class="forceCommunityRichText"><div dir="ltr" data-aura-rendered-by="22:35;a" class="uiOutputRichText forceOutputRichText" data-aura-class="uiOutputRichText forceOutputRichText"><div style="text-align: center;" data-aura-rendered-by="23:35;a">Join the community to receive personalized information and customer support.</div><!--render facet: 23:35;a--></div><div class="clear" data-aura-rendered-by="25:35;a"></div></div>
+             </div>
+            <!-- Header ....END .... -->
+
+            <!-- FORM Elements ....START .... -->
+            <!-- First Name......START .... -->
+            <div class="slds-form-element">
+                <label class="slds-form-element__label slds-p-left--xx-large slds-p-right--xx-large" for="text-input-01">
+                    <abbr class="slds-required " title="required">*</abbr> <b>First Name </b></label>
+                <div class="slds-form-element__control slds-p-left--xx-large slds-p-right--xx-large">
+                      <div class="slds-media__figure">
+                        <div class="">
+                            <div class="slds-form-element slds-lookup"><label class="slds-assistive-text" for="global-search-01">First Name</label>
+                                 <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon--left">
+                                      <c:svgIcon class="slds-input__icon" svgPath="/resource/SLDS/assets/icons/standard-sprite/svg/symbols.svg#user" category="standard" size="large" name="firstName" />
+                                    <input  aura:id="firstName"
+                                        class="slds-input slds-lookup__search-input" 
+                                        placeholder="Enter your First Name" value="" required="true" maxlength="40"/> 
+                                      <!--<ui:inputText label="" aura:id="firstName"
+                                        class="slds-input slds-lookup__search-input" 
+                                        placeholder="Enter your First Name" required="true"/>-->
+            
+                                </div>
+                            </div>
+                   		 </div>
+                 	 </div>
+                </div>
+            </div>
+            <!-- First Name......END .... -->
+            
+            <!-- Last Name......START .... -->
+            <div class="slds-form-element">
+                <label class="slds-form-element__label slds-p-left--xx-large slds-p-right--xx-large" for="text-input-01">
+                    <abbr class="slds-required " title="required">*</abbr> <b>Last Name </b></label>
+                <div class="slds-form-element__control slds-p-left--xx-large slds-p-right--xx-large">
+                      <div class="slds-media__figure">
+                        <div class="">
+                            <div class="slds-form-element slds-lookup"><label class="slds-assistive-text" for="global-search-01">Last Name</label>
+                                 <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon--left">
+                                      <c:svgIcon class="slds-input__icon" svgPath="/resource/SLDS/assets/icons/standard-sprite/svg/symbols.svg#user" category="standard" size="large" name="lastName" />
+                                     <input  aura:id="lastName"
+                                        class="slds-input slds-lookup__search-input" 
+                                        placeholder="Enter your Last Name" value="" required="true" maxlength="80"/>
+            
+                                </div>
+                            </div>
+                   		 </div>
+                 	 </div>
+                </div>
+            </div>
+            <!-- Last Name......END .... -->
+            
+            <!-- Email......START .... -->
+            <div class="slds-form-element">
+                <label class="slds-form-element__label slds-p-left--xx-large slds-p-right--xx-large" for="text-input-01">
+                    <abbr class="slds-required " title="required">*</abbr> <b>Email </b></label>
+                <div class="slds-form-element__control slds-p-left--xx-large slds-p-right--xx-large">
+                      <div class="slds-media__figure">
+                        <div class="">
+                            <div class="slds-form-element slds-lookup"><label class="slds-assistive-text" for="global-search-01">Email</label>
+                                 <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon--left">
+                                      <c:svgIcon class="slds-input__icon" svgPath="/resource/SLDS/assets/icons/standard-sprite/svg/symbols.svg#email" category="standard" size="large" name="email" />
+                                     <input  aura:id="email"
+                                        class="slds-input slds-lookup__search-input" 
+                                        placeholder="Enter your Email" value="" required="true" maxlength="80"/>
+            
+                                </div>
+                            </div>
+                   		 </div>
+                 	 </div>
+                </div>
+            </div>
+            <!-- Email......END .... -->
+
+            <!-- Title......START .... -->
+            <div class="slds-form-element">
+                <label class="slds-form-element__label slds-p-left--xx-large slds-p-right--xx-large" for="text-input-01">
+                    <abbr class="slds-required " title="required">*</abbr> <b>Title </b></label>
+                <div class="slds-form-element__control slds-p-left--xx-large slds-p-right--xx-large">
+                      <div class="slds-media__figure">
+                        <div class="">
+                            <div class="slds-form-element slds-lookup"><label class="slds-assistive-text" for="global-search-01">Title</label>
+                                 <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon--left">
+                                      <c:svgIcon class="slds-input__icon" svgPath="/resource/SLDS/assets/icons/custom-sprite/svg/symbols.svg#custom33" category="custom" size="large" name="title" />
+                                     <input  aura:id="title"
+                                        class="slds-input slds-lookup__search-input" 
+                                        placeholder="Enter your Title" value="" required="true" maxlength="128"/>
+            
+                                </div>
+                            </div>
+                   		 </div>
+                 	 </div>
+                </div>
+            </div>
+            <!-- Title......END .... -->
+
+            <!-- Mobile......START .... -->
+            <div class="slds-form-element">
+                <label class="slds-form-element__label slds-p-left--xx-large slds-p-right--xx-large" for="text-input-01">
+                    <abbr class="slds-required " title="required">*</abbr> <b>Mobile # </b></label>
+                <div class="slds-form-element__control slds-p-left--xx-large slds-p-right--xx-large">
+                      <div class="slds-media__figure">
+                        <div class="">
+                            <div class="slds-form-element slds-lookup"><label class="slds-assistive-text" for="global-search-01">Mobile #</label>
+                                 <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon--left">
+                                      <c:svgIcon class="slds-input__icon" svgPath="/resource/SLDS/assets/icons/utility-sprite/svg/symbols.svg#phone_portrait" category="utility" size="large" name="title" />
+                                     <input  aura:id="mobile"
+                                        class="slds-input slds-lookup__search-input" 
+                                        placeholder="Enter your Mobile Number" value="" required="true" maxlength="10"/>
+            
+                                </div>
+                            </div>
+                   		 </div>
+                 	 </div>
+                </div>
+            </div>
+            <!-- Mobile......END .... -->
+            
+            <!-- Company......START .... -->
+            <div class="slds-form-element">
+                <label class="slds-form-element__label slds-p-left--xx-large slds-p-right--xx-large" for="text-input-01">
+                    <abbr class="slds-required " title="required">*</abbr> <b>Company</b></label>
+                <div class="slds-form-element__control slds-p-left--xx-large slds-p-right--xx-large">
+                      <div class="slds-media__figure">
+                        <div class="">
+                            <div class="slds-form-element slds-lookup"><label class="slds-assistive-text" for="global-search-01">Company</label>
+                                 <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon--left">
+                                      <c:svgIcon class="slds-input__icon" svgPath="/resource/SLDS/assets/icons/utility-sprite/svg/symbols.svg#company" category="utility" size="large" name="title" />
+                                     <input  aura:id="company"
+                                        class="slds-input slds-lookup__search-input" 
+                                        placeholder="Enter your Company" value="" required="true" maxlength="255"/>
+            
+                                </div>
+                            </div>
+                   		 </div>
+                 	 </div>
+                </div>
+            </div>
+            <!-- Company......END .... -->
+            
+            <!-- Country......START .... -->
+            <div class="slds-form-element">
+                <label class="slds-form-element__label slds-p-left--xx-large slds-p-right--xx-large" for="text-input-01">
+                    <abbr class="slds-required " title="required">*</abbr> <b>Country</b></label>
+                <div class="slds-form-element__control slds-p-left--xx-large slds-p-right--xx-large">
+                      <div class="slds-media__figure">
+                        <div class="">
+                            <div class="slds-form-element slds-lookup"><label class="slds-assistive-text" for="global-search-01">Country</label>
+                                 <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon--left">
+                                      <c:svgIcon class="slds-input__icon" svgPath="/resource/SLDS/assets/icons/custom-sprite/svg/symbols.svg#custom68" category="custom" size="large" name="title" />
+                                     <input  aura:id="country"
+                                        class="slds-input slds-lookup__search-input" 
+                                        placeholder="Enter your Country" value="" required="true" maxlength="80"/>
+            
+                                </div>
+                            </div>
+                   		 </div>
+                 	 </div>
+                </div>
+            </div>
+            <!-- Country......END .... -->
+
+            <!-- State......START .... -->
+            <div class="slds-form-element">
+                <label class="slds-form-element__label slds-p-left--xx-large slds-p-right--xx-large" for="text-input-01">
+                    <abbr class="slds-required " title="required">*</abbr> <b>State</b></label>
+                <div class="slds-form-element__control slds-p-left--xx-large slds-p-right--xx-large">
+                      <div class="slds-media__figure">
+                        <div class="">
+                            <div class="slds-form-element slds-lookup"><label class="slds-assistive-text" for="global-search-01">State</label>
+                                 <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon--left">
+                                      <c:svgIcon class="slds-input__icon" svgPath="/resource/SLDS/assets/icons/custom-sprite/svg/symbols.svg#custom59" category="custom" size="large" name="title" />
+                                     <input  aura:id="state"
+                                        class="slds-input slds-lookup__search-input" 
+                                        placeholder="Enter your State" value="" required="true" maxlength="80"/>
+            
+                                </div>
+                            </div>
+                   		 </div>
+                 	 </div>
+                </div>
+            </div>
+            <!-- State......END .... -->
+
+            <!-- Zip......START .... -->
+            <div class="slds-form-element">
+                <label class="slds-form-element__label slds-p-left--xx-large slds-p-right--xx-large" for="text-input-01">
+                    <abbr class="slds-required " title="required">*</abbr> <b>Zip</b></label>
+                <div class="slds-form-element__control slds-p-left--xx-large slds-p-right--xx-large">
+                      <div class="slds-media__figure">
+                        <div class="">
+                            <div class="slds-form-element slds-lookup"><label class="slds-assistive-text" for="global-search-01">Zip</label>
+                                 <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon--left">
+                                      <c:svgIcon class="slds-input__icon" svgPath="/resource/SLDS/assets/icons/custom-sprite/svg/symbols.svg#custom55" category="custom" size="large" name="title" />
+                                     <input  aura:id="zip"
+                                        class="slds-input slds-lookup__search-input" 
+                                        placeholder="Enter your Postal Code" value="" required="true" maxlength="20"/>
+            
+                                </div>
+                            </div>
+                   		 </div>
+                 	 </div>
+                </div>
+            </div>
+            <!-- Zip......END .... -->
+
+
+            
+            <div class="slds-p-around--xx-large"><center><ui:button label="Sign Up" class="slds-button slds-button--brand slds-button--inverse fullWidtth" press="{!c.signUp}" /></center></div>
+            
+            <!-- FORM Elements ....END .... -->
+  
+    </div>
+    </form>
+    <!-- Registration Form ....END .... -->
+
+</aura:component>

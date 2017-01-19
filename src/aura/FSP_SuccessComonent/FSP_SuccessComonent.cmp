@@ -1,0 +1,474 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+ 
+    <aura:attribute name="sampleRightIcon" type="String" default="utility:chevronright" />
+     <aura:attribute name="quoteIconId" type="String" default="utility:chevronright" />
+     <aura:attribute name="OpportunityIconId" type="String" default="utility:chevrondown" />
+     <aura:attribute name="oppId" type="String" default="0062800000EQrNCAA1" />
+    <aura:attribute name="quoteId" type="String" default="a0F28000006I1Q2EAK" />
+    
+    
+    
+
+   <!-- Page Header START--> 
+  <div class="slds-page-header" role="banner">
+      <div class="slds-media slds-media--center">
+        <div class="slds-media__figure">
+          <lightning:icon iconName="action:log_event" size="medium" alternativeText="Customers"/>
+        </div>
+        <div class="slds-media__body">
+         <h1 class="slds-page-header__title slds-m-right--small slds-align-middle slds-truncate" title="this should match the Record Title"> Meeting Success</h1>
+        </div>
+		<div class="slds-media__figure slds-media__figure--reverse">
+			<div class="slds-button-group" role="group">
+              <button class="slds-button slds-button--neutral" >Close</button>
+           
+            </div>
+      </div>
+      </div>
+	</div>  
+   <!-- Page Header END--> 
+    
+  
+    
+
+    
+ 
+    
+  <!-- Opportunity START ..................... -->  
+    
+ <div aura:id="oppSectionDiv" class="slds-section slds-is-open">
+  <h4 class="slds-section__title">
+    <button class="slds-button slds-text-body--regular" onclick="{!c.changeDivClass}">
+        <lightning:icon aura:id="oppIconId" iconName="{!v.OpportunityIconId}" size="small" alternativeText="Product" />
+        &nbsp;&nbsp; <lightning:icon iconName="standard:opportunity" size="medium" alternativeText="Product" />
+        &nbsp;&nbsp;<a href="" onclick="{!c.navigateToOppDetailPage}">Meeting to discuss on Favourite Products</a></button>
+      
+  </h4>
+  <div class="slds-section__content">
+   <!-- Opportunity Setion .. START -->  
+    
+<div class="">
+   
+   
+<article class="slds-card">
+  <div class="slds-card__header slds-grid ">
+    <header class="slds-media slds-media--center slds-has-flexi-truncate">
+      <div class="slds-media__figure">
+         <lightning:icon iconName="standard:product" size="medium" alternativeText="Product"/>
+      </div>
+      <div class="slds-media__body slds-truncate">
+        <h2>
+          <a href="javascript:void(0);" class="slds-text-link--reset">
+            <span class="slds-text-body--regular">Products(3)</span>
+          </a>
+        </h2>
+      </div>
+    </header>
+    <div class="slds-no-flex">
+      
+    </div>
+  </div>
+  <div class="slds-card__body">
+    <div class="slds-card__body--inner slds-grid slds-wrap slds-grid--pull-padded">
+      <div class="slds-tile slds-media slds-card__tile slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-hint-parent">
+        <div class="slds-media__figure">
+          <div class="slds-icon_container">
+            <lightning:icon iconName="standard:product" size="small" alternativeText="Products"/>
+            <span class="slds-assistive-text">Product</span>
+          </div>
+        </div>
+        <div class="slds-media__body">
+          <div class="slds-grid slds-grid--align-spread slds-has-flexi-truncate">
+            <h3 class="slds-truncate" title="Related Record Title 1"><a href="javascript:void(0);">Line Drivers</a></h3>
+            <div class="slds-shrink-none">
+              <button class="slds-button slds-button--icon-border-filled slds-button--icon-x-small" aria-haspopup="true" title="More Actions">
+              <lightning:icon iconName="utility:chevrondown" size="xx-small" alternativeText="Customers"/>
+                <span class="slds-assistive-text">More options</span>
+              </button>
+            </div>
+          </div>
+          <div class="slds-tile__detail slds-text-body--small">
+            <dl class="slds-dl--horizontal">
+              <dt class="slds-dl--horizontal__label">
+                <span class="slds-truncate" title="Type">Quantity:</span>
+              </dt>
+              <dd class="slds-dl--horizontal__detail slds-tile__meta">
+                  <span class="slds-truncate" title="Visit">18</span>
+              </dd>
+           
+            </dl>
+          </div>
+        </div>
+      </div>
+      <div class="slds-tile slds-media slds-card__tile slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-hint-parent">
+        <div class="slds-media__figure">
+          <div class="slds-icon_container">
+             <lightning:icon iconName="standard:product" size="small" alternativeText="Products"/>
+            <span class="slds-assistive-text">Product</span>
+          </div>
+        </div>
+        <div class="slds-media__body">
+          <div class="slds-grid slds-grid--align-spread slds-has-flexi-truncate">
+            <h3 class="slds-truncate" title="Related Record Title 1"><a href="javascript:void(0);">RF Remote</a></h3>
+            <div class="slds-shrink-none">
+              <button class="slds-button slds-button--icon-border-filled slds-button--icon-x-small" aria-haspopup="true" title="More Actions">
+               <lightning:icon iconName="utility:chevrondown" size="xx-small" alternativeText="Tasks"/>
+                <span class="slds-assistive-text">More options</span>
+              </button>
+            </div>
+          </div>
+          <div class="slds-tile__detail slds-text-body--small">
+            <dl class="slds-dl--horizontal">
+              <dt class="slds-dl--horizontal__label">
+                <span class="slds-truncate" title="Type">Quantity:</span>
+              </dt>
+              <dd class="slds-dl--horizontal__detail slds-tile__meta">
+                  <span class="slds-truncate" title="Visit">12</span>
+              </dd>
+    
+            </dl>
+          </div>
+        </div>
+      </div>
+
+ <div class="slds-tile slds-media slds-card__tile slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-hint-parent">
+        <div class="slds-media__figure">
+          <div class="slds-icon_container">
+             <lightning:icon iconName="standard:product" size="small" alternativeText="Products"/>
+            <span class="slds-assistive-text">Product</span>
+          </div>
+        </div>
+        <div class="slds-media__body">
+          <div class="slds-grid slds-grid--align-spread slds-has-flexi-truncate">
+            <h3 class="slds-truncate" title="Related Record Title 1"><a href="javascript:void(0);">Server Sharer </a></h3>
+            <div class="slds-shrink-none">
+              <button class="slds-button slds-button--icon-border-filled slds-button--icon-x-small" aria-haspopup="true" title="More Actions">
+               <lightning:icon iconName="utility:chevrondown" size="xx-small" alternativeText="Tasks"/>
+                <span class="slds-assistive-text">More options</span>
+              </button>
+            </div>
+          </div>
+          <div class="slds-tile__detail slds-text-body--small">
+            <dl class="slds-dl--horizontal">
+              <dt class="slds-dl--horizontal__label">
+                <span class="slds-truncate" title="Type">Quantity:</span>
+              </dt>
+              <dd class="slds-dl--horizontal__detail slds-tile__meta">
+                  <span class="slds-truncate" title="Visit">6</span>
+              </dd>
+      
+            </dl>
+          </div>
+        </div>
+      </div>        
+        
+        
+    </div>
+  </div>
+  <div class="slds-card__footer slds-m-bottom--medium">&nbsp;</div>
+</article> 
+    </div>
+ <!-- Opportunity Setion ..END --> 
+  </div>
+</div>
+    
+<!-- Opportunity END ..................... --> 
+    
+<!-- Quote START ..................... --> 
+    
+        
+ <div class="slds-section " aura:id="changeIt">
+  <h3 class="slds-section__title">
+    <button class="slds-button slds-text-body--regular" onclick="{!c.changeClass}">
+        <lightning:icon aura:id="quoteIconId2" iconName="{!v.quoteIconId}" size="small" alternativeText="Product" />
+        &nbsp;&nbsp; <lightning:icon iconName="action:quote" size="small" alternativeText="Product" />
+        &nbsp;&nbsp;<a href="" onclick="{!c.navigateToQuoteDetailPage}">Meeting to discuss on Favourite Products</a></button>
+     
+  </h3>
+  <div class="slds-section__content">
+   <!-- Quote Setion .. START -->  
+    
+<div class="">
+   
+   
+<article class="slds-card">
+  <div class="slds-card__header slds-grid ">
+    <header class="slds-media slds-media--center slds-has-flexi-truncate">
+      <div class="slds-media__figure">
+         <lightning:icon iconName="standard:product" size="medium" alternativeText="Product"/>
+      </div>
+      <div class="slds-media__body slds-truncate">
+        <h2>
+          <a href="javascript:void(0);" class="slds-text-link--reset">
+            <span class="slds-text-body--regular">Products(3)</span>
+          </a>
+        </h2>
+      </div>
+    </header>
+    <div class="slds-no-flex">
+      
+    </div>
+  </div>
+  <div class="slds-card__body">
+    <div class="slds-card__body--inner slds-grid slds-wrap slds-grid--pull-padded">
+      <div class="slds-tile slds-media slds-card__tile slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-hint-parent">
+        <div class="slds-media__figure">
+          <div class="slds-icon_container">
+            <lightning:icon iconName="standard:product" size="small" alternativeText="Products"/>
+            <span class="slds-assistive-text">Product</span>
+          </div>
+        </div>
+        <div class="slds-media__body">
+          <div class="slds-grid slds-grid--align-spread slds-has-flexi-truncate">
+            <h3 class="slds-truncate" title="Related Record Title 1"><a href="javascript:void(0);">Line Drivers</a></h3>
+            <div class="slds-shrink-none">
+              <button class="slds-button slds-button--icon-border-filled slds-button--icon-x-small" aria-haspopup="true" title="More Actions">
+              <lightning:icon iconName="utility:chevrondown" size="xx-small" alternativeText="Customers"/>
+                <span class="slds-assistive-text">More options</span>
+              </button>
+            </div>
+          </div>
+          <div class="slds-tile__detail slds-text-body--small">
+            <dl class="slds-dl--horizontal">
+              <dt class="slds-dl--horizontal__label">
+                <span class="slds-truncate" title="Type">Quantity:</span>
+              </dt>
+              <dd class="slds-dl--horizontal__detail slds-tile__meta">
+                  <span class="slds-truncate" title="Visit">18</span>
+              </dd>
+           
+            </dl>
+          </div>
+        </div>
+      </div>
+      <div class="slds-tile slds-media slds-card__tile slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-hint-parent">
+        <div class="slds-media__figure">
+          <div class="slds-icon_container">
+             <lightning:icon iconName="standard:product" size="small" alternativeText="Products"/>
+            <span class="slds-assistive-text">Product</span>
+          </div>
+        </div>
+        <div class="slds-media__body">
+          <div class="slds-grid slds-grid--align-spread slds-has-flexi-truncate">
+            <h3 class="slds-truncate" title="Related Record Title 1"><a href="javascript:void(0);">RF Remote</a></h3>
+            <div class="slds-shrink-none">
+              <button class="slds-button slds-button--icon-border-filled slds-button--icon-x-small" aria-haspopup="true" title="More Actions">
+               <lightning:icon iconName="utility:chevrondown" size="xx-small" alternativeText="Tasks"/>
+                <span class="slds-assistive-text">More options</span>
+              </button>
+            </div>
+          </div>
+          <div class="slds-tile__detail slds-text-body--small">
+            <dl class="slds-dl--horizontal">
+              <dt class="slds-dl--horizontal__label">
+                <span class="slds-truncate" title="Type">Quantity:</span>
+              </dt>
+              <dd class="slds-dl--horizontal__detail slds-tile__meta">
+                  <span class="slds-truncate" title="Visit">12</span>
+              </dd>
+    
+            </dl>
+          </div>
+        </div>
+      </div>
+
+ <div class="slds-tile slds-media slds-card__tile slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-hint-parent">
+        <div class="slds-media__figure">
+          <div class="slds-icon_container">
+             <lightning:icon iconName="standard:product" size="small" alternativeText="Products"/>
+            <span class="slds-assistive-text">Product</span>
+          </div>
+        </div>
+        <div class="slds-media__body">
+          <div class="slds-grid slds-grid--align-spread slds-has-flexi-truncate">
+            <h3 class="slds-truncate" title="Related Record Title 1"><a href="javascript:void(0);">Server Sharer </a></h3>
+            <div class="slds-shrink-none">
+              <button class="slds-button slds-button--icon-border-filled slds-button--icon-x-small" aria-haspopup="true" title="More Actions">
+               <lightning:icon iconName="utility:chevrondown" size="xx-small" alternativeText="Tasks"/>
+                <span class="slds-assistive-text">More options</span>
+              </button>
+            </div>
+          </div>
+          <div class="slds-tile__detail slds-text-body--small">
+            <dl class="slds-dl--horizontal">
+              <dt class="slds-dl--horizontal__label">
+                <span class="slds-truncate" title="Type">Quantity:</span>
+              </dt>
+              <dd class="slds-dl--horizontal__detail slds-tile__meta">
+                  <span class="slds-truncate" title="Visit">6</span>
+              </dd>
+      
+            </dl>
+          </div>
+        </div>
+      </div>        
+        
+        
+    </div>
+  </div>
+  <div class="slds-card__footer slds-m-bottom--medium">&nbsp;</div>
+</article> 
+    </div>
+ <!-- Quote Setion ..END --> 
+  </div>
+</div>
+    
+    
+<!-- Quote END ..................... -->    
+    
+
+<!-- Sampls START .............. -->
+    
+     <div aura:id="sampleSectionDiv" class="slds-section">
+  <h3 class="slds-section__title">
+    <button class="slds-button slds-text-body--regular" onclick="{!c.changeSampleDivClass}">
+        <lightning:icon aura:id="sampleIconId" iconName="{!v.sampleRightIcon}" size="small" alternativeText="Product" />
+        &nbsp;&nbsp; <lightning:icon iconName="action:share_file" size="small" alternativeText="Product" />
+        &nbsp;&nbsp;Samples</button>
+      
+  </h3>
+  <div class="slds-section__content">
+<!-- Tasks Setion START-->  
+    <div class="">
+  
+<article class="slds-card">
+  <div class="slds-card__header slds-grid ">
+    <header class="slds-media slds-media--center slds-has-flexi-truncate">
+      <div class="slds-media__figure">
+         <lightning:icon iconName="standard:task" size="medium" alternativeText="Tasks"/>
+      </div>
+      <div class="slds-media__body slds-truncate">
+        <h2>
+          <a href="javascript:void(0);" class="slds-text-link--reset">
+            <span class="slds-text-body--regular">Tasks(3)</span>
+          </a>
+        </h2>
+      </div>
+    </header>
+    <div class="slds-no-flex">
+      
+    </div>
+  </div>
+  <div class="slds-card__body">
+    <div class="slds-card__body--inner slds-grid slds-wrap slds-grid--pull-padded">
+      <div class="slds-tile slds-media slds-card__tile slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-hint-parent">
+        <div class="slds-media__figure">
+          <div class="slds-icon_container">
+            <lightning:icon iconName="standard:task" size="small" alternativeText="Tasks"/>
+            <span class="slds-assistive-text">Task</span>
+          </div>
+        </div>
+        <div class="slds-media__body">
+          <div class="slds-grid slds-grid--align-spread slds-has-flexi-truncate">
+            <h3 class="slds-truncate" title="Related Record Title 1"><a href="javascript:void(0);">Data Switcher Task</a></h3>
+            <div class="slds-shrink-none">
+              <button class="slds-button slds-button--icon-border-filled slds-button--icon-x-small" aria-haspopup="true" title="More Actions">
+              <lightning:icon iconName="utility:chevrondown" size="xx-small" alternativeText="Customers"/>
+                <span class="slds-assistive-text">More options</span>
+              </button>
+            </div>
+          </div>
+          <div class="slds-tile__detail slds-text-body--small">
+            <dl class="slds-dl--horizontal">
+              <dt class="slds-dl--horizontal__label">
+                <span class="slds-truncate" title="Type">Product:</span>
+              </dt>
+              <dd class="slds-dl--horizontal__detail slds-tile__meta">
+                  <span class="slds-truncate" title="Visit">Data Switcher</span>
+              </dd>
+              <dt class="slds-dl--horizontal__label">
+                <span class="slds-truncate" title="Date">Quantity:</span>
+              </dt>
+              <dd class="slds-dl--horizontal__detail slds-tile__meta">
+                <span class="slds-truncate" title="1/31/15 3:45PM">2</span>
+              </dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+      <div class="slds-tile slds-media slds-card__tile slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-hint-parent">
+        <div class="slds-media__figure">
+          <div class="slds-icon_container">
+             <lightning:icon iconName="standard:task" size="small" alternativeText="Tasks"/>
+            <span class="slds-assistive-text">Task</span>
+          </div>
+        </div>
+        <div class="slds-media__body">
+          <div class="slds-grid slds-grid--align-spread slds-has-flexi-truncate">
+            <h3 class="slds-truncate" title="Related Record Title 1"><a href="javascript:void(0);">Relay Controller Task</a></h3>
+            <div class="slds-shrink-none">
+              <button class="slds-button slds-button--icon-border-filled slds-button--icon-x-small" aria-haspopup="true" title="More Actions">
+               <lightning:icon iconName="utility:chevrondown" size="xx-small" alternativeText="Tasks"/>
+                <span class="slds-assistive-text">More options</span>
+              </button>
+            </div>
+          </div>
+          <div class="slds-tile__detail slds-text-body--small">
+            <dl class="slds-dl--horizontal">
+              <dt class="slds-dl--horizontal__label">
+                <span class="slds-truncate" title="Type">Product:</span>
+              </dt>
+              <dd class="slds-dl--horizontal__detail slds-tile__meta">
+                  <span class="slds-truncate" title="Visit">Relay Controller</span>
+              </dd>
+              <dt class="slds-dl--horizontal__label">
+                <span class="slds-truncate" title="Date">Quantity:</span>
+              </dt>
+              <dd class="slds-dl--horizontal__detail slds-tile__meta">
+                <span class="slds-truncate" title="Proposal/Price Quote">4</span>
+              </dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+
+ <div class="slds-tile slds-media slds-card__tile slds-p-horizontal--small slds-size--1-of-1 slds-medium-size--1-of-3 slds-hint-parent">
+        <div class="slds-media__figure">
+          <div class="slds-icon_container">
+             <lightning:icon iconName="standard:task" size="small" alternativeText="Tasks"/>
+            <span class="slds-assistive-text">Task</span>
+          </div>
+        </div>
+        <div class="slds-media__body">
+          <div class="slds-grid slds-grid--align-spread slds-has-flexi-truncate">
+            <h3 class="slds-truncate" title="Related Record Title 1"><a href="javascript:void(0);">Server Sharer Task</a></h3>
+            <div class="slds-shrink-none">
+              <button class="slds-button slds-button--icon-border-filled slds-button--icon-x-small" aria-haspopup="true" title="More Actions">
+               <lightning:icon iconName="utility:chevrondown" size="xx-small" alternativeText="Tasks"/>
+                <span class="slds-assistive-text">More options</span>
+              </button>
+            </div>
+          </div>
+          <div class="slds-tile__detail slds-text-body--small">
+            <dl class="slds-dl--horizontal">
+              <dt class="slds-dl--horizontal__label">
+                <span class="slds-truncate" title="Type">Product:</span>
+              </dt>
+              <dd class="slds-dl--horizontal__detail slds-tile__meta">
+                  <span class="slds-truncate" title="Visit">Server Sharer</span>
+              </dd>
+              <dt class="slds-dl--horizontal__label">
+                <span class="slds-truncate" title="Date">Quantity:</span>
+              </dt>
+              <dd class="slds-dl--horizontal__detail slds-tile__meta">
+                <span class="slds-truncate" title="1/31/15 3:45PM">1</span>
+              </dd>
+            </dl>
+          </div>
+        </div>
+      </div>        
+        
+        
+    </div>
+  </div>
+  <div class="slds-card__footer slds-m-bottom--medium">&nbsp;</div>
+</article> 
+    </div>
+ <!-- Tasks Setion END-->
+  </div>
+</div>
+    
+<!-- Sampls END .............. -->
+    
+    
+</aura:component>

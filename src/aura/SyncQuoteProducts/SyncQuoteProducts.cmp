@@ -1,0 +1,6 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId" >
+ <aura:attribute name="recordId" type="Id" />
+
+    <ui:button aura:id="button" buttonTitle="Click to see what you put into the field" class="button" label="Sync Products" press="{!c.myAction}"/>
+  
+</aura:component>

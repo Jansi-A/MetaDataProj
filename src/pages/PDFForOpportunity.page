@@ -1,0 +1,16 @@
+<apex:page Standardcontroller="Opportunity" extensions="PDFController" >
+<head>
+ <style type="text/css">
+ body { font-family: Arial Unicode MS; }
+ </style>
+ </head>
+ <h1>Application Information</h1>
+ 
+    <apex:form >
+         <apex:commandButton value="SavePDF" action="{!savePdf}"/>
+    </apex:form>
+   
+
+
+
+</apex:page>

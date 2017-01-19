@@ -1,0 +1,9 @@
+<aura:component >
+    <aura:attribute name="item" type="Camping_Item__c" required="true"/>
+     Name: <ui:outputText value="{!v.Name}"> </ui:outputText>
+   Packed: <ui:outputText value="{!v.item.Packed__c}"> </ui:outputText>
+     yy: <ui:outputText value="{!v.item.Test__c}"> </ui:outputText>
+    Price: <ui:outputText value="{!v.item.Price__c}"> </ui:outputText>
+    <ui:button label="test" press="{!c.handleClick}" />
+	
+</aura:component>

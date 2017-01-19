@@ -1,0 +1,22 @@
+<aura:component implements="flexipage:availableForAllPageTypes" controller="customMeetingControllerNew">
+    <aura:attribute name="meetingRowId" type="String" default=""/>
+	<aura:attribute name="listOfCase" type="Case[]"/>
+    <aura:attribute name="meetingIntRowIdCase" type="String" default=""/>
+	   Test from Eclipce IDE Component
+    <table class="slds-table slds-table--bordered slds-table--striped">
+        <thead>
+            <tr class="slds-text-heading--label">
+                <th class="slds-cell-shrink">
+                    <label> <!--class="slds-checkbox"> -->
+                        <!--<input type="checkbox" name="Add" /> -->
+                        <span class="slds-checkbox--faux"></span>
+                        <!--<span class="slds-assistive-text">Select All</span> -->
+                    </label> 
+                </th>
+                <th class="slds-is-sortable slds-is-resizable" scope="col">Case Number</th>
+                <th class="slds-is-sortable slds-is-resizable" scope="col">Case Origin</th>
+        	</tr>
+        </thead>        
+   
+    </table>
+</aura:component>

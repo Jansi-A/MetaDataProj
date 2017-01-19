@@ -1,0 +1,324 @@
+<apex:page renderAs="pdf" applyBodyTag="false" controller="PDFGetDataController" >
+   <head>
+        <style>
+         body { font-family: 'Arial Unicode MS'; }
+         td, tr{ font-size:10px;padding:0px;}
+         
+         .barInBlue{ color: white;font-weight:bold;font-size:11px;background-color:#0B0B61; } 
+         .barInGray{ color: black;font-weight:bold;font-size:11px;background-color:#D0D0D0; } 
+         
+          #table_inside td, th, tr{font-size:10px; border-right:1px solid #000; border-bottom:1px solid #000;}
+          
+          #highInfoId td, th, tr{font-size:10px; border-right:1px solid #000; border-bottom:1px solid #000;}
+ 
+          .blueHeader{
+          background-color:#0B0B61;
+          color: #ffffff;
+          }
+          
+                        @page {
+                                 
+                                 @top-center {
+                                       content: element(header);
+                               }
+                               @bottom-left {
+                                     content: element(footer);
+                               }
+                            }
+                        div.header {
+                                      padding-bottom: 50px;
+                                      position: running(header);
+                           }
+                       div.footer {
+                                display: block;
+                             padding: 10px;
+                               position: running(footer);
+                      }
+                       .pagenumber:before {
+                            content: counter(page);
+                       }
+                        .pagecount:before {
+                             content: counter(pages);
+                        }
+      </style>
+    </head>
+    <body>
+               <div class="header">
+              <div>     <table width="100%">
+        <tr>
+        <td width="50%"> <apex:image url="{!$Resource.crmitLogo}" width="100" height="50"/> </td>
+        <td width="50%" align="right"><h3>Invoice </h3></td>
+        </tr>
+        </table></div>
+           </div>
+           <div class="footer">
+                <div>
+        
+        <table  align="center" >
+            <tr>
+            <td> 111 Street, Town/City, County, ST, 00000
+            </td>
+            </tr>
+            
+        </table>
+                
+        <table  align="center" >
+            <tr>
+            <td> Tel: 0-000-000-0000 Fax: 0-000-000-0000 E-mail: info@yourcompanysite.com Web: www.yourcompanysite.com
+
+            </td>
+            </tr>
+            
+        </table></div>
+          </div>
+          <div class="content">
+               <table width="100%">
+           <tr >
+           <td width="60%"  class="barInBlue">Bill To:</td>
+           <td width="40%" alighn="right">&nbsp;</td>
+           </tr>
+        </table>
+       <table width="100%" >
+
+            <tr>
+            <td width="60%">
+                <table>
+                    <tr><td>{!invoice.Name} </td></tr>
+                    <tr><td >{!invoice.Company_Name__c} </td></tr>
+                    <tr><td>{!invoice.Strret_Address__c} </td></tr>
+                    <tr><td>{!invoice.city__c} </td></tr>
+                    <tr><td>{!invoice.phone__c} </td></tr>
+                    
+                </table>
+            </td>
+            <td width="40%" alighn="right">
+             <table width="100%">
+                    <tr><td width="25%">&nbsp;</td><td align="left" width="40%">Date: </td><td  width="35%">{!invoiceDate} </td></tr>
+                    <tr><td width="25%">&nbsp;</td><td align="left" width="40%">Invoice#:</td><td  width="35%">000000{!invoice.Invoice_Number__c}  </td></tr>
+                    <tr><td width="25%">&nbsp;</td><td align="left" width="40%">Customer ID#:</td><td  width="35%">ABC1234789998  </td></tr>
+                    <tr><td width="25%">&nbsp;</td><td align="left" width="40%">Work Order#:</td><td  width="35%">12345  </td></tr>
+                    <tr><td width="25%">&nbsp;</td><td align="left" width="40%">Payment Due By#:</td><td  width="35%">January 8, 2017  </td></tr>
+                    
+                </table>
+            </td>
+        </tr>
+        </table>
+        <!-- Line Items ...........START........... -->
+        <table width="100%">
+           <tr >
+               <td width="85%" class="barInBlue">Description</td>
+               <td colspan="15%" class="barInBlue">Line Total</td>
+           </tr>
+            <tr >
+               <td width="85%">Line Item 1</td>
+               <td colspan="15%">200</td>
+           </tr>
+           <tr >
+               <td width="85%">Line Item 2</td>
+               <td colspan="15%">3500</td>
+           </tr>
+            <tr>
+               <td width="85%">Line Item 3</td>
+               <td colspan="15%">1500</td>
+           </tr>
+            <tr >
+               <td width="85%">Line Item 4</td>
+               <td colspan="15%">100</td>
+           </tr>
+            <tr>
+               <td width="85%">Line Item 5</td>
+               <td colspan="15%">500</td>
+           </tr>
+
+        </table>
+<!-- Special Notes and Sub Totals Start ...........START........... -->
+        <table width="100%">
+           <tr >
+            
+                <td width="60%">
+                    <table width="100%">
+                        <tr>
+                            <td class="barInBlue" width="100%">Special Notes and Instructions</td>
+                        </tr>
+                        <tr rowspan="6">
+                            <td width="100%"><p style="text-align: justify;text-justify: inter-word;">Special Notes and Instructions Special Notes and Instructions Special Notes and Instructions Special Notes and Instructions Special Notes and Instructions Special Notes and Instructions Special Notes and Instructions Special Notes and Instructions Special Notes and Instructions Special Notes and Instructions Special Notes and Instructions Special Notes and Instructions Special Notes and Instructions Special Notes and Instructions Special Notes and Instructions Special Notes and Instructions</p></td>
+                        </tr>
+                    </table>
+               </td>
+               <td width="1%">&nbsp;</td>
+               <td width="39%">
+                    <table width="100%">
+                        <tr>
+                            <td width="58%" align="right">Sub Total</td>
+                            <td width="3%" >&nbsp;</td>
+                            <td width="39%">$ 8900</td>
+                        </tr>
+                        <tr>
+                            <td width="58%" align="right">Sales Tax Rate</td>
+                            <td width="3%" >&nbsp;</td>
+                            <td width="39%">%0.0</td>
+                        </tr>
+                    
+                        <tr>
+                            <td width="58%" align="right">Sales Tax </td>
+                            <td width="3%" >&nbsp;</td>
+                            <td width="39%">$0.0</td>
+                        </tr>
+                        <tr>
+                            <td width="58%" align="right">Discount</td>
+                            <td width="3%" >&nbsp;</td>
+                            <td width="39%">$100</td>
+                        </tr>
+                        <tr>
+                            <td width="58%" align="right"><b>Total</b></td>
+                            <td width="3%" >&nbsp;</td>
+                            <td width="39%" class=""><b>$5500</b></td>
+                        </tr>
+                    </table>
+               </td>
+               
+               
+           </tr>
+        </table>
+                        <table  align="center" >
+            <tr>
+            <td> Should you have any enquiries concerning this invoice, please contact John Doe on 0-000-000-0000
+            </td>
+            </tr>
+
+        <!-- Terms and Conditions .... START -->
+        <table width="100%">
+            <tr >
+                <td class="barInBlue">
+                Terms and Conditions
+                </td>
+            </tr>
+            
+            <tr class="barInGray">
+                <td>
+                IMPORTANT—READ CAREFULLY:
+                </td>
+            </tr>
+            
+            <tr>
+                <td><p style="text-align: justify;text-justify: inter-word;">
+                This End-User License Agreement (”EULA”) is a legal agreement between you and Spreadsheet123.com that covers all Microsoft Excel and OpenOffice.org templates or spreadsheets (”TEMPLATES”) and software ("SOFTWARE") made by Spreadsheet123.com.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <p style="text-align: justify;text-justify: inter-word;">By downloading, copying, accessing or otherwise using any TEMPLATES or/and SOFTWARE, you agree to be bound by the terms of this EULA.</p>
+                </td>
+            </tr>
+            
+            <tr class="barInGray" >
+                <td>
+                TEMPLATES LICENSE
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <p style="text-align: justify;text-justify: inter-word;">This TEMPLATE is protected by copyright laws and international copyright treaties, as well as other intellectual property laws and treaties. Each TEMPLATE is licensed, not sold.</p>
+                </td>
+            </tr>
+            
+            <tr class="barInGray" >
+                <td>
+                1. GRANT OF LICENSE.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <p style="text-align: justify;text-justify: inter-word;">This EULA grants you the right to download this TEMPLATE free of charge for <font color="red">personal use or use within your company or organization.</font></p>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                <p style="text-align: justify;text-justify: inter-word;">You may customize this <b>TEMPLATE</b> with you personal information and use for its intended purpose in personal calculations documentation or/and communications, but you may not remove or alter any logo, trademark, copyright, hyperlinks, disclaimers, terms of use or other proprietary notices within this TEMPLATE.</p>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                <p style="text-align: justify;text-justify: inter-word;"><font color="red">You may not sell, resell, license, rent, lease, lend or otherwise transfer for value without written permission of <b>SPREADSHEET123.COM </b></font></p>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                <p style="text-align: justify;text-justify: inter-word;">You may not distribute this TEMPLATE in any stand-alone products that contain only the TEMPLATE, or as part of any other product. You may not copy or post any TEMPLATE on any network computer or broadcast it in any media without written permission of SPREADSHEET123.COM.</p>
+                </td>
+            </tr>
+            
+            <tr class="barInGray" >
+                <td>
+                2. RESERVATION OF RIGHTS.
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                <p style="text-align: justify;text-justify: inter-word;">All title and copyrights in and to the Template, and any copies of the Template, are owned by Spreadsheet123.com. All rights not expressly granted are reserved by Spreadsheet123.com. In particular, this EULA does not grant you any rights in connection with any trademarks or service marks of Spreadsheet123.com. Use of any Template for any purpose other than expressly permitted in this EULA is prohibited, and may result in severe civil and criminal penalties.</p>
+                </td>
+            </tr>
+
+            <tr class="barInGray" >
+                <td>
+                3. TERMINATION.
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                <p style="text-align: justify;text-justify: inter-word;">Without prejudice to any other rights, Spreadsheet123.com may terminate this EULA if you fail to comply with the terms and conditions of this EULA. In such event, you must destroy all copies of any TEMPLATE.</p>
+                </td>
+            </tr>   
+            <tr class="barInGray">
+                <td>
+                4. NOTICE SPECIFIC TO TEMPLATES.
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                <p style="text-align: justify;text-justify: inter-word;">SPREADSHEET123.COM MAKE NO REPRESENTATIONS ABOUT THE SUITABILITY OF THE TEMPLATES FOR ANY PURPOSE. ALL TEMPLATES ARE PROVIDED  “AS IS” WITHOUT WARRANTY OF ANY KIND. SPREADSHEET123.COM HEREBY DISCLAIM ALL WARRANTIES AND CONDITIONS WITH REGARD TO THE TEMPLATES, INCLUDING ALL IMPLIED WARRANTIES AND CONDITIONS OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT. IN NO EVENT SHALL SPREADSHEET123.COM BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS </p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                &nbsp;
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                <p style="text-align: justify;text-justify: inter-word;">ANY REFERENCES TO EVENTS, PEOPLE, PLACES, OR ENTITIES IN THE TEMPLATES IS PURELY FICTITIOUS AND NOT INTENDED TO REPRESENT ANY ACTUAL EVENT,PERSON, PLACE, OR ENTITY. SPREADSHEET123.COM  DISCLAIMS ANY LIKENESS OR SIMILARITIES TO ACTUAL EVENTS, PEOPLE, PLACES, OR ENTITIES, AND ANY SUCH LIKENESS OR SIMILARITIES ARE UNINTENTIONAL AND PURELY COINCIDENTAL.</p>
+                </td>
+            </tr>
+            <tr class="barInGray" >
+                <td>
+                5. MISCELLANEOUS.
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                <p style="text-align: justify;text-justify: inter-word;">Some states do not allow the limitation or exclusion of liability for incidental or consequential damages, so the above limitation may not apply to you.</p>
+                </td>
+            </tr>
+            
+        </table>
+
+        </table>
+          </div>
+    
+    </body>
+  
+      </apex:page>

@@ -1,0 +1,62 @@
+<aura:component implements="flexipage:availableForAllPageTypes" controller="customMeetingControllerNew">
+   
+    <aura:attribute name="selectedMeetingId" type="String" />
+    <aura:attribute name="selectedMeetingDetails" type="Meeting__c"/>
+    <aura:attribute name="selectedMeetingAccountId" type="String" default="!v.selectedMeetingDetails.Related_Account__c" />
+    
+    <aura:attribute name="meetingRelatedSelectedOpps" type="Meeting_Internal__c[]"/>
+    <aura:attribute name="meetingRelatedAccRelatedOpps" type="Meeting_Internal__c[]"/>
+    
+    <aura:attribute name="selectedOppIds" type="String" default=""/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+   
+    
+	 <table>
+        
+          <tr>
+              <td><b>Subject :</b>&nbsp;&nbsp;&nbsp; <ui:outputText aura:id="meetingNameOP" value="{!v.selectedMeetingDetails.Name}"/></td>
+              <td><b>Related Account :</b>&nbsp;&nbsp;&nbsp;<ui:outputText aura:id="relatedAccountOP" value="{!v.selectedMeetingDetails.Related_Account__r.Name}"/></td>
+          	  <td ><ui:button label="Start Meeting" press="{!c.startMeeting}" /> </td>
+         </tr>
+         
+         
+     </table>
+    
+    <!-- Display Meeting associated Opportunities -->
+    
+    <br> </br><br> </br><b><h3 style='font-weight:bold'>Opportunities</h3> </b> <br> </br> 
+     <table class="slds-table slds-table--bordered slds-table--striped">
+        <thead>
+            <tr class="slds-text-heading--label">
+                <th class="slds-cell-shrink">
+                 
+                </th>
+                <th class="slds-is-sortable slds-is-resizable" scope="col"><b>Opportunity Name</b></th>
+                <th class="slds-is-sortable slds-is-resizable" scope="col"><b>Opportunity Id</b></th>
+        	</tr>
+        </thead> 
+         
+        <aura:iteration var="item" items="{!v.meetingRelatedSelectedOpps}">
+            <tr>
+                <td><ui:inputCheckbox text="{!item.Id}" change="{!c.onCheck}" value="true"/></td>
+            	<td>{!item.Opportunity__r.Name}</td>
+                <td>{!item.Opportunity__c}</td>
+        	</tr> 
+           
+    	</aura:iteration>
+    
+    
+    <!-- Display Meeting associated account associated Opportunities -->
+    
+        <aura:iteration var="item" items="{!v.meetingRelatedAccRelatedOpps}">
+            <tr>
+                <td><ui:inputCheckbox text="{!item.Id}" change="{!c.onCheck}" value="false"/></td>
+            	<td>{!item.Name}</td>
+                <td>{!item.Id}</td>
+        	</tr>        	
+    	</aura:iteration>
+    </table>
+    
+</aura:component>

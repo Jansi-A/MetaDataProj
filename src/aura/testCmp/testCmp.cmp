@@ -1,0 +1,81 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId,force:appHostable" 
+                controller="EventRelatedDetails"  >
+    
+    <ltng:require styles="/resource/bootstrapCSS"/>	
+    <ltng:require scripts="/resource/JQuery,/resource/bootstrapJs"
+   afterScriptsLoaded="{!c.doInit}"/>
+    <aura:attribute name="imagesUrl" type="String[]" />
+       <aura:attribute name="Folder" type="String" default="SliderImages"/>
+    <aura:attribute name="interval" type="Integer" default="2000"/>
+    
+	<aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="eventId" type="String" />
+    <aura:attribute name="leadName" type="String" default="" />
+    <!--<aura:handler name="init" value="{!this}" action="{!c.doInit}"/> -->
+   
+    <aura:attribute name="universitiesList" type="Universities__c[]"/>
+    
+    
+ 
+    
+     <div id="carousel-example-generic" class="carousel slide imageInterval" data-ride="carousel" >
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <aura:iteration items="{!v.universitiesList}" var="university" indexVar="index">                                
+                <aura:if isTrue="{!index == 0}">
+                    <li data-target="#carousel-example-generic" data-slide-to="{!index}" class="active"></li>
+                    <aura:set attribute="else">
+                        <li data-target="#carousel-example-generic" data-slide-to="{!index}" ></li>
+                    </aura:set>
+                </aura:if>   
+            </aura:iteration>      
+        </ol>
+        
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">                           
+            <aura:iteration items="{!v.universitiesList}" var="university" indexVar="index">   
+                <aura:if isTrue="{!index == 0}">
+                    <div class="item active" >
+                     <!-- <div class="img-responsive">
+                        <ui:inputText aura:id="unvId" class="hidden"  value="{!university.Id}"/>
+         <ui:outputText aura:id="{!university.Id}" body="{!university.Id}" value="{!university.Name}" class="accountId" click="c.navigateToRecord" />
+         <ui:outputRichText value='{!university.Image__c}' click="c.navigateToRecord"/>
+        <p>{!university.Description__c}</p>
+                        </div> -->
+                                 <ui:outputText aura:id="{!university.Id}" body="{!university.Id}" value="{!university.Name}" class="accountId" click="c.navigateToRecord" />
+                        <ui:outputRichText value='{!university.Image__c}' click="c.navigateToRecord"/>
+                        <ui:inputText aura:id="unvId" class="hidden"  value="{!university.Id}"/>
+
+         
+        
+                        <div class="carousel-caption"> {!university.Name}
+                        </div>
+                        <p>{!university.Description__c}</p>
+                    </div>
+                    <aura:set attribute="else" >
+                        <div class="item" >
+                          <!--  <div class="img-responsive">
+                        <ui:inputText aura:id="unvId" class="hidden"  value="{!university.Id}"/>
+         <ui:outputText aura:id="{!university.Id}" body="{!university.Id}" value="{!university.Name}" class="accountId" click="c.navigateToRecord" />
+         <ui:outputRichText value='{!university.Image__c}' click="c.navigateToRecord"/>
+        <p>{!university.Description__c}</p>
+                        </div> -->
+                            <img src="https://jansi-dev-ed--c.ap2.visual.force.com/resource/1472638541000/a?isdtp=p1" alt="..." class="img-responsive"  style="width:100% !important"/> 
+                            <div class="carousel-caption"> </div>
+                        </div>
+                    </aura:set>
+                </aura:if>
+                
+            </aura:iteration>
+        </div>
+        <!-- Controls -->
+        <a class="left carousel-control"  href="#carousel-example-generic"  role="button" data-slide="prev" onclick="{!c.Previous}">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control"  href="#carousel-example-generic"  role="button" data-slide="next" onclick="{!c.Next}">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</aura:component>

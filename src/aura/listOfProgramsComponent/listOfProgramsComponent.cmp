@@ -1,0 +1,50 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId,force:appHostable" 
+                controller="EventRelatedDetails">
+    
+  
+    <aura:attribute name="eventId" type="String" />
+    <aura:attribute name="selectedProgramId" type="String" />
+    <aura:attribute name="selectedCampusId" type="String" />
+    <aura:attribute name="CampusRelatedProgramsList" type="Program__c[]"/>
+    <aura:attribute name="campusObj" type="Campus__c" />
+    <aura:attribute name="showDiv" type="String"  />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    
+     <div class="slds"> 
+
+        <table class="">
+            
+              <tbody>
+                  <tr><td><b><h1>{!v.campusObj.Name}</h1></b></td></tr>
+                 <tr><td>{!v.campusObj.Description__c}</td></tr>
+                  <tr><td>&nbsp;</td></tr>
+                 
+              </tbody>
+        </table>
+        
+    </div>
+    
+    <div class="slds"> 
+         <table class="">
+            
+              <tbody>
+                  
+               <tr><td><b><h1>Programs</h1></b></td></tr>
+                <tr><td>&nbsp;</td></tr>
+              </tbody>
+        </table>
+
+        <table class="">
+              <tbody>
+                <aura:iteration items="{!v.CampusRelatedProgramsList}" var="obj">
+                    <c:EachProgramComponent eachProgram="{!obj}" showDiv="{!v.showDiv}" selectedProgramId="{!v.selectedProgramId}" />
+                    
+                </aura:iteration>
+            </tbody>
+        </table>
+        
+    </div>
+	
+</aura:component>

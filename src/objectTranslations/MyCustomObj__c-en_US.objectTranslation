@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>MyCustomObj</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>MyCustomObjs</value>
+    </caseValues>
+    <fields>
+        <label><!-- CheckBox Field --></label>
+        <name>CheckBox_Field__c</name>
+    </fields>
+    <fields>
+        <label><!-- EncryField --></label>
+        <name>EncryField__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pick1 --></label>
+        <name>Pick1__c</name>
+        <picklistValues>
+            <masterLabel>Hello</masterLabel>
+            <translation><!-- Hello --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>abc</masterLabel>
+            <translation><!-- abc --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ee</masterLabel>
+            <translation><!-- ee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>tt</masterLabel>
+            <translation><!-- tt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>uu</masterLabel>
+            <translation><!-- uu --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>xyz</masterLabel>
+            <translation><!-- xyz --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>yuu</masterLabel>
+            <translation><!-- yuu --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Pick2 --></label>
+        <name>Pick2__c</name>
+        <picklistValues>
+            <masterLabel>455</masterLabel>
+            <translation><!-- 455 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>456</masterLabel>
+            <translation><!-- 456 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>667</masterLabel>
+            <translation><!-- 667 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- RichTextArea --></label>
+        <name>RichTextArea__c</name>
+    </fields>
+    <fields>
+        <label><!-- g1 --></label>
+        <name>g1__c</name>
+    </fields>
+    <layouts>
+        <layout>Test</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- section 1 --></label>
+            <section>section 1</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Edit Comments --></label>
+        <name>comments</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Custom Record Type --></label>
+        <name>Custom_Record_Type</name>
+    </recordTypes>
+    <sharingReasons>
+        <label><!-- r1 --></label>
+        <name>r1</name>
+    </sharingReasons>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- RichTextArea__c len should not be &lt; 0 --></errorMessage>
+        <name>Test_Rich_Text_Area_value</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- button --></label>
+        <name>button</name>
+    </webLinks>
+</CustomObjectTranslation>

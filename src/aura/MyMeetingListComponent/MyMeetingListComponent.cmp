@@ -1,0 +1,39 @@
+<aura:component implements="flexipage:availableForAllPageTypes" controller="customMeetingControllerNew" >
+    
+	<aura:attribute name="isViewDetail" type="Boolean" default="false"/>
+    <aura:attribute name="isViewMeetingList" type="Boolean" default="true"/>
+    <aura:attribute name="selectedMeetingId" type="String" default=""/>
+    <aura:attribute name="selectedMeetingAccountId" type="String" default=""/>
+    <aura:attribute name="TestMeetingId2" type="String" default="test" />
+
+	<aura:handler event="c:CustomMeetingEvent" action="{!c.handleApplicationEvent}"/>
+
+          <table>
+        
+          <tr>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+          	  <td >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ui:button label="Create Meeting" press="{!c.createMeeting}" /> </td>
+         </tr>
+         
+         
+     </table>
+    <aura:if isTrue="{!v.isViewMeetingList}">
+        <div>
+       		 <h3 style='font-weight:bold'>My Own Meeting List</h3>
+        	 <p><c:myOwnMeetingListComponent isViewMeetingParam="{!v.isViewMeetingList}" selectedMeetingId="{!v.selectedMeetingId}"/></p>
+    	</div><br/>
+  
+   		<div>
+      	  <h3 style='font-weight:bold'>I am Part of Meeting List</h3>
+    	</div>
+        
+        <aura:set attribute="else">
+            <c:ViewMeetingComponent selectedMeetingId="{!v.selectedMeetingId}" selectedMeetingAccountId="{!v.selectedMeetingAccountId}" />
+   		 </aura:set>
+
+        
+      </aura:if>
+
+   
+</aura:component>

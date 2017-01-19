@@ -1,0 +1,6 @@
+<apex:page >
+    <apex:pageBlock >
+        <apex:pageBlockSection >Account is successfully created with Contact.</apex:pageBlockSection>
+    
+    </apex:pageBlock>
+</apex:page>

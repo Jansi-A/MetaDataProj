@@ -1,0 +1,55 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId,force:appHostable" 
+                controller="EventRelatedDetails" >
+	<aura:attribute name="eachUniversity" type="Universities__c"/>
+    <aura:attribute name="showDiv" type="String" /> 
+    <aura:attribute name="selectedUniversityId" type="String" />
+
+    <!--<tr><td><b><a href="javascript:void(0);"  onclick="{!c.showRelatedCampuses}" >{!v.eachUniversity.Name}</a></b></td></tr>
+    <tr><td><a href="javascript:void(0);"  onclick="{!c.showRelatedCampuses}" ><ui:outputRichText value='{!v.eachUniversity.Image__c}'  click="c.showRelatedCampuses"/></a></td></tr>
+    <tr><td>{!v.eachUniversity.Description__c}</td></tr>
+    <tr><td>&nbsp;</td></tr> -->
+    
+                       <div class="col-md-4">
+                        <div class="card card-user" style="margin-bottom: 15px;    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(63, 63, 68, 0.1);
+    background-color: #FFFFFF;">
+                            <div class="image" style="height: 110px;    width: 100%;
+    overflow: hidden;
+  
+    border-radius: 4px 4px 0 0;
+    position: relative;
+   
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;">
+                                <img src="/resource/university1_jpg" alt="..."> </img>
+                                
+                            </div>
+                            <div class="content" style="min-height: 200px;    padding: 15px;">
+                                <div class="author">
+                                     <a href="javascript:void(0);"  onclick="{!c.showRelatedCampuses}">
+                                         
+                                         <img class="logo_img" width="180"  src="/resource/u74_png" alt="..."></img>
+                                        <h4 class="title">{!v.eachUniversity.Name}<br></br>
+                                         <small>Australia</small>
+                                      </h4> 
+                                    </a>
+                                </div>  
+                                <p class="description text-center">{!v.eachUniversity.Description__c} 
+                                </p>
+                            </div>
+                            <hr></hr>
+                            <div class="text-center">
+                                <button href="#" class="btn btn-simple"><i class="fa fa-facebook-square"></i></button>
+                                <button href="#" class="btn btn-simple"><i class="fa fa-twitter-square"></i></button>
+                                <button href="#" class="btn btn-simple"><i class="fa fa-google-plus-square"></i></button>
+                                  <button href="#" class="btn btn-simple"><i class="fa fa-linkedin-square"></i></button>
+                                
+                                
+                                
+    
+                            </div>
+                        </div>
+                    </div>
+                                
+                                
+</aura:component>

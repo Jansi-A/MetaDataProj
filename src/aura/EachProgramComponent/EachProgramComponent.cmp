@@ -1,0 +1,14 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId,force:appHostable" 
+                controller="EventRelatedDetails">
+	
+    
+	<aura:attribute name="eachProgram" type="Program__c"/>
+	<aura:attribute name="showDiv" type="String"  />
+	<aura:attribute name="selectedProgramId" type="String" />
+        
+    <tr><td><b><a href="javascript:void(0);"  onclick="{!c.showProgramDetails}" >{!v.eachProgram.Name}</a></b></td></tr>
+    <!--<tr><td><a href="javascript:void(0);"  onclick="{!c.showProgramDetails}" ><ui:outputRichText value='{!v.eachProgram.Image__c}'/></a></td></tr> -->
+    <!--<tr><td>{!v.eachCampus.Description__c}</td></tr> -->
+    <tr><td>&nbsp;</td></tr>
+    
+</aura:component>

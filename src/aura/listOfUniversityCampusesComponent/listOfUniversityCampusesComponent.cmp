@@ -1,0 +1,52 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId,force:appHostable" 
+                controller="EventRelatedDetails" >
+    
+    <aura:attribute name="eventId" type="String" />
+    <aura:attribute name="selectedUniversityId" type="String" />
+    <aura:attribute name="selectedCampusId" type="String" />
+    <aura:attribute name="universitieRelatedCampusesList" type="Campus__c[]"/>
+    <aura:attribute name="universityObj" type="Universities__c" />
+    <aura:attribute name="showDiv" type="String"  />
+    <aura:attribute name="eventfired" type="String"  />
+    
+    
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    
+     <div class="slds"> 
+
+        <table class="">
+            
+              <tbody>
+                  <tr><td><b><h1>{!v.universityObj.Name}</h1></b></td></tr>
+                 <tr><td>{!v.universityObj.Description__c}</td></tr>
+                  <tr><td>&nbsp;</td></tr>
+                 
+              </tbody>
+        </table>
+        
+    </div>
+    
+    <div class="slds"> 
+         <table class="">
+            
+              <tbody>
+                  
+               <tr><td><b><h1>Campus Locations</h1></b></td></tr>
+                <tr><td>&nbsp;</td></tr>
+              </tbody>
+        </table>
+
+        <table class="">
+              <tbody>
+                <aura:iteration items="{!v.universitieRelatedCampusesList}" var="obj">
+                    <c:EachCampusComponent eachCampus="{!obj}" showDiv="{!v.showDiv}" selectedCampusId="{!v.selectedCampusId}" />
+                    
+                </aura:iteration>
+            </tbody>
+        </table>
+        
+    </div>
+    
+</aura:component>

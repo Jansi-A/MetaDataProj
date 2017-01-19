@@ -1,0 +1,123 @@
+<aura:component implements="flexipage:availableForAllPageTypes" controller="ProductController" >
+    
+    <aura:attribute name='customerId' type="Id" default="0012800000zeCvPAAU" />
+    <aura:attribute name="products" type="Account[]" />
+    <aura:attribute name="productDescription" type="String" />
+    <aura:attribute name="slides" type="String[]" />
+    <aura:attribute name="enableProductDetailSection" type="Boolean" default="false"/>
+    
+    
+    <aura:attribute name="pageSize" type="integer" default="6"/>
+    <aura:attribute name="page" type="integer"/>
+    <aura:attribute name="pages" type="integer"/>
+    <aura:attribute name="total" type="integer"/>
+    <aura:attribute name="tileSize" type="integer" default="200"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler event="c:PropertyPageChange" action="{!c.pageChange}"/>
+      <div class="slds-page-header" role="banner">
+      <div class="slds-media slds-media--center">
+        <div class="slds-media__figure">
+          <lightning:icon iconName="standard:account" size="medium" alternativeText="Customers"/>
+        </div>
+        <div class="slds-media__body">
+            <a href="javascript:void(0);" onclick="{!c.navigateToRecordDetail}" ><h1 class="slds-page-header__title slds-m-right--small slds-align-middle slds-truncate" title="CRMIT Solutions">CRMIT Solutions</h1></a>
+        </div>
+		<div class="slds-media__figure slds-media__figure--reverse">
+			<div class="slds-button-group" role="group">
+              <button class="slds-button slds-button--neutral" press="{!c.navigateToMeeting}" onclick="{!c.navigateToMeeting}" click="{!c.navigateToMeeting}">Finish</button>
+           
+            </div>
+      </div>
+      </div>
+	</div> 
+
+     <div >
+      <div class="slds-media slds-media--center">
+        <div class="slds-media__figure">
+         
+        </div>
+        <div class="slds-media__body">
+        
+        </div>
+		<div class="slds-media__figure slds-media__figure--reverse">
+			<div class="slds-global-header__item slds-global-header__item--search slds-float--right slds-m-top--medium">
+                <div class="slds-form-element slds-lookup"><label class="slds-assistive-text" for="global-search-01">Search Products</label>
+                     <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon--left">
+                         <lightning:icon class="slds-input__icon" iconName="utility:search"
+                            size="x-small" alternativeText="Search" /> <!-- <svg aria-hidden="true" class="slds-input__icon">
+                                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#search"></use>
+                                  </svg> --> <input id="global-search-01"
+                            class="slds-input slds-lookup__search-input" type="search"
+                            placeholder="Search Products" />
+                    </div>
+                </div>
+		</div>
+      </div>
+      </div>
+	</div>
+
+    <!--<aura:iteration items="{!v.products}" var="product">
+  		 <c:ProductTile product="{!product}" tileSize="{!v.tileSize}"/>
+ 
+     </aura:iteration> -->
+    <div class="slds-p-top--small">
+     <lightning:layout horizontalAlign="center" multipleRows="true">
+        <aura:iteration items="{!v.products}" var="product">
+            <lightning:layoutItem >
+                <c:ProductTile product="{!product}" tileSize="{!v.tileSize}" productDescription="{!v.productDescription}" slides="{!v.slides}" enableProductDetailSection="{!v.enableProductDetailSection}"/>
+            </lightning:layoutItem>    
+        </aura:iteration>
+	</lightning:layout>
+    
+    <c:PropertyPaginator page="{!v.page}" pages="{!v.pages}" total="{!v.total}"/>
+    </div>
+    
+    <aura:if isTrue="{!v.enableProductDetailSection}">
+           <div class="slds-p-top--small">
+               
+                   <div class="slds-page-header" role="banner">
+      <div class="slds-media slds-media--center">
+        <div class="slds-media__figure">
+          PRODUCT DETAILS
+        </div>
+        <div class="slds-media__body">
+         
+        </div>
+		<div class="slds-media__figure slds-media__figure--reverse">
+			<div class="slds-button-group" role="group">
+                
+              <button class="slds-button slds-button--neutral">Ask Question</button>
+              <button class="slds-button slds-button--neutral">Ask Quote</button>
+              <button class="slds-button slds-button--neutral">Opportunity</button>
+
+
+
+
+              
+            </div>
+      </div>
+      </div>
+	</div>
+               
+       
+        <div  class="slds-p-top--small">
+            <p style="text-align: justify;text-justify: inter-word;">
+                {!v.productDescription} 
+            </p>
+     
+    </div>
+        
+    </div>
+       
+
+        
+        <div class="slds-p-top--small">
+            <c:PictureCarousel slides="{!v.slides}" slideIndex="0"/>
+        </div>
+
+    
+    </aura:if>
+  
+ 
+</aura:component>

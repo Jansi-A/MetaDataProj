@@ -1,0 +1,6 @@
+<aura:event type="APPLICATION" description="Fired when a University/Campus/Program search is completed">
+    <aura:attribute name="programId" type="String"/>
+    <aura:attribute name="programName" type="String"/>
+    <aura:attribute name="leadId" type="String"/>
+
+</aura:event>

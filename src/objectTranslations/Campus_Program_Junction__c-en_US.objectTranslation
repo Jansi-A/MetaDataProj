@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Campus Program Junction</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Campus Program Junctions</value>
+    </caseValues>
+    <fields>
+        <label><!-- Campus --></label>
+        <name>Campus__c</name>
+        <relationshipLabel><!-- Campus Program Junctions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Program --></label>
+        <name>Program__c</name>
+        <relationshipLabel><!-- Campus Program Junctions --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

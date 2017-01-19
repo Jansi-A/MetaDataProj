@@ -1,0 +1,37 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+	
+    <aura:attribute name='eventId' type="Id" default="00U2800000RENbeEAH" />
+    <table class="slds-table slds-table--bordered slds-table--cell-buffer">
+  <thead>
+    <tr class="slds-text-title--caps">
+     <th colspan="4" style="background:#16325c">
+        <div class="slds-truncate" title="Opportunity Name" style="color:white;text-align: center">My Events</div>
+        </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Account Name">
+          <div class="slds-truncate" title="Cloudhub"><a href="javascript:void(0);" onclick="{!c.navigateToRecordDetail}">Meeting to discuss on Favourite Products</a></div>
+      </td>
+      <td data-label="Close Date">
+        <div class="slds-truncate" title="4/14/2015">11/09/2016</div>
+      </td>
+      <td data-label="Contact">
+        <div class="slds-truncate" title=""><button class="slds-button slds-button--neutral" press="{!c.navigateToCustomerDetail}" onclick="{!c.navigateToCustomerDetail}" click="{!c.navigateToCustomerDetail}" >Start Meeting</button></div>
+      </td>
+    </tr>
+    <tr>
+      <td data-label="Account Name">
+          <div class="slds-truncate" title="Cloudhub"><a href="javascript:void(0);" onclick="{!c.navigateToRecordDetail}">Follow Up Meeting to Review</a></div>
+      </td>
+      <td data-label="Close Date">
+        <div class="slds-truncate" title="4/14/2015">12/12/2016</div>
+      </td>
+      <td data-label="Contact">
+        <div class="slds-truncate" title=""><button class="slds-button slds-button--neutral" press="{!c.navigateToCustomerDetail}" onclick="{!c.navigateToCustomerDetail}" click="{!c.navigateToCustomerDetail}">Start Meeting</button></div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</aura:component>

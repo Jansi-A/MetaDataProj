@@ -1,0 +1,7 @@
+<apex:page sidebar="true"  showHeader="false">
+   <apex:pageBlock >
+    <apex:pageBlockSection >
+        <apex:image url="https://developer.salesforce.com/files/salesforce-developer-network-logo.png"/>
+       </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

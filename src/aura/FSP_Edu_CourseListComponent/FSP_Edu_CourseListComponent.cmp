@@ -1,0 +1,22 @@
+<aura:component > 
+    
+    <aura:attribute name="eachCourseId" type="String"/>
+    <aura:attribute name="eachCourseName" type="String"/>
+    <aura:attribute name="isInterestedCourse" type="boolean"/>
+    
+     <div class="col-md-2 col-sm-4">                    
+         <div class="card card-user">  
+             
+             <aura:if isTrue="{!v.isInterestedCourse}">
+             	<img class="fav_icon" src="/resource/STAR_ICON"/>
+             </aura:if>   
+             
+             <div class="content">
+                 <a href="course_details.html">                           
+                     <h4 class="title text-center"><i><img src="/resource/FSP_EDU_1" width="50"/></i>{!v.eachCourseName}</h4>
+                 </a>
+             </div>                           
+         </div>
+     </div>
+    
+</aura:component>

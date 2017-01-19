@@ -1,0 +1,13 @@
+<apex:page standardController="Event" >
+    <apex:form >
+    <apex:pageBlock >
+        
+    <apex:pageBlockSection >
+            <apex:inputField value="{!Event.id}" />
+        </apex:pageBlockSection>
+    
+    </apex:pageBlock>
+        </apex:form>
+   
+    
+</apex:page>

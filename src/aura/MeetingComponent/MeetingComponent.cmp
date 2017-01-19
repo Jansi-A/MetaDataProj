@@ -1,0 +1,23 @@
+<aura:component implements="flexipage:availableForAllPageTypes" controller="customMeetingControllerNew">
+    <!--aura:registerEvent name="createMeetingEvent" type="c:MeetingComponentEvent"/-->
+    <aura:attribute name="meeting" type="Meeting__c" default="{ 'sobjectType': 'Meeting__c' }"/>
+    <aura:attribute name="isRecordCreated" type="Boolean" default="false"/>
+    <aura:if isTrue="{!v.isRecordCreated}">
+        <table>
+            <tr><td><b>Subject</b>&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;<ui:outputText aura:id="meetingNameOP" value="{!v.meeting.Name}"/></td>
+                <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+                <td><b>Related Account</b>&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;<ui:outputText aura:id="relatedAccountOP" value="{!v.meeting.Related_Account__r.Name}"/></td>
+            </tr>
+        </table><br/>
+		<c:RelatedComponents meetingRoId="{!v.meeting.Id}"/>
+    <aura:set attribute="else">
+        <table>
+            <tr><td>Subject</td><td><force:inputField aura:id="meetingName" value="{!v.meeting.Name}" required="true"/></td>
+                <td>&nbsp;</td>
+                <td>Related Account</td><td><force:inputField aura:id="relatedAccount" value="{!v.meeting.Related_Account__c}" required="true"/></td></tr>
+        </table><br/>
+       <table align="center"><tr><td><ui:button label="Create" press="{!c.saveMeeting}" /></td></tr></table> 
+    </aura:set>
+  </aura:if>
+    <force:outputField aura:id="meetingName" value="{!v.meeting.Name}"/>
+</aura:component>

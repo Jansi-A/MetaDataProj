@@ -1,0 +1,38 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId,force:appHostable" 
+                controller="EventRelatedDetails"  >
+    
+        <ltng:require styles="/resource/fsp_bootstrap_css"  
+                      afterScriptsLoaded="{!c.doInit}" /> 
+    <aura:attribute name="eventId" type="String" />
+    <aura:attribute name="test" type="String" default="{!v.eventId}"/>
+    <aura:attribute name="universitiesList" type="Universities__c[]"/>
+    <aura:attribute name="showDiv" type="String"  /> 
+    <aura:attribute name="selectedUniversityId" type="String" />
+    <aura:attribute name="eventfired" type="String"  />
+    <aura:attribute name="searchObj" type="String"  />
+    <aura:attribute name="searchText" type="String"/>
+    <!--<aura:handler name="init" value="{!this}" action="{!c.doInit}" /> -->
+    <!--<aura:handler event="c:SearchEvent" action="{!c.handleSearchEvent}"/>-->
+
+   
+	<!-- <ltng:require styles="/resource/fsp_bootstrap,/resource/fsp_demo,/resource/fsp_font_awesome_min,/resource/fsp_fonts_googleapis_css,/resource/fsp_pe_icon_7_stroke,/resource/pe_icon_7_stroke_css"  afterScriptsLoaded="{!c.doInit}"/> --> 
+      <div class="fsp">
+    <div class="wrapper" style="background-color: white;">
+ 
+    <div class="main-panel" style="transform: translate3d(0px, 0, 0);transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
+    left: 0;">
+    <div class="content" style="font-family: 'Cambria,'Helvetica Neue',Arial,sans-serif;font-weight: 400;">
+            <div class="container-fluid">
+                <div class="row">
+          
+            <aura:iteration items="{!v.universitiesList}" var="obj">
+               <c:EachUniversityComponent eachUniversity="{!obj}" showDiv="{!v.showDiv}" selectedUniversityId="{!v.selectedUniversityId}" /> 
+            </aura:iteration>
+                    
+                </div>                    
+            </div>
+        </div>
+           </div>
+    </div>
+    </div>
+</aura:component>

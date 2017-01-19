@@ -1,0 +1,57 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId,force:appHostable" 
+                controller="EventRelatedDetails">
+    
+    
+    <aura:attribute name="showDiv" type="String"  />
+    <aura:attribute name="eventId" type="String" />
+    <aura:attribute name="leadId" type="String" />
+    
+   
+    <!-- <aura:attribute name="jan" type="String" default="uuuuuuuuu" /> -->
+    <aura:attribute name="programObj" type="Program__c" />
+    <aura:attribute name="selectedProgramId" type="String" />
+    <aura:registerEvent name="ApplicationCreationEvent" type="c:SearchEvent"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" /> 
+    
+    
+   
+       <div class="slds"> 
+           <!--<ui:button press="{!c.apply}">Apply</ui:button> -->
+           <ui:button press="{!c.createApp}">Apply</ui:button>
+
+        <table class="">
+            
+              <tbody>
+                  <tr><td>&nbsp;</td></tr>
+                  <tr><td><b><h1>{!v.programObj.Name}</h1></b></td></tr>
+                 <tr><td>{!v.programObj.Description__c}</td></tr>
+                  <tr><td>&nbsp;</td></tr>
+                 
+              </tbody>
+        </table>
+        
+    </div>
+    
+    <table class="slds-table slds-table--bordered slds-table--striped slds-table--cell-buffer">
+    <thead>
+      <tr class="slds-text-heading--label">
+        <th scope="col"><span class="slds-truncate">Fee Year</span></th>
+        <th scope="col"><span class="slds-truncate">Tution Fee Unit</span></th>
+        <th scope="col"><span class="slds-truncate">Fee</span></th>
+        <th scope="col"><span class="slds-truncate">Total Program Fee</span></th>
+       </tr>
+    </thead>
+    <tbody>
+          <tr>
+          <td>{!v.programObj.Fee_Year__c}</td>                 
+          <td>{!v.programObj.Tution_Fee_Unit__c}</td>
+          <td>{!v.programObj.Fee__c}</td>                 
+          <td>{!v.programObj.Total_Program_Fee__c}</td>
+        </tr>
+
+    </tbody>
+  </table>
+    
+	
+</aura:component>

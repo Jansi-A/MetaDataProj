@@ -1,0 +1,62 @@
+<aura:component implements="flexipage:availableForAllPageTypes" >
+    
+	<ltng:require styles="/resource/fsp_bootstrap_css"/>
+	<ltng:require styles="/resource/fsp_demo"/>
+    <ltng:require styles="/resource/fsp_font_awesome_min"/>
+    <ltng:require styles="/resource/fsp_fonts_googleapis_css"/>
+    <ltng:require styles="/resource/fsp_pe_icon_7_stroke"/>
+        
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+     <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <aura:attribute name="TaggedCourseList" type="List"/>
+    <aura:attribute name="InterestedCourseList" type="List"/>
+   
+    <div class="fsp">
+        <div class="wrapper">  
+            <div class="main-panel">            
+                <div class="content">
+                    <div class="container-fluid">
+                        
+                        <div class="row">
+                            <div class="col-md-6 col-sm-0">	
+                            </div>
+                            <div class="text-center col-md-6 col-sm-12 ">
+                                <div class="pull-right">
+                                    <form action="search_results.html" class="navbar-form navbar-left navbar-search-form" role="search">                  
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                                            <input type="text" value="" class="form-control" placeholder="Search Programs"/>
+                                        </div> 
+                                    </form>
+                                    <a href="certificates.html" style=" " class="btn btn-primary">Manage Certificates</a>								   
+                                </div>
+                            </div>
+                        </div>  
+                    
+                        <div class="row">
+                            <div class="chute chute-center" >                
+                                <div class="panel">  
+                                    <div class="panel-body pn">   
+                                        
+                                        <aura:iteration var="InterestedCourseList" items="{!v.InterestedCourseList}" indexVar="key">                                           
+                                             <c:FSP_Edu_CourseListComponent eachCourseId="{!InterestedCourseList.id}" eachCourseName="{!InterestedCourseList.name}" isInterestedCourse="true"/>
+                                        </aura:iteration>  
+                                        
+                                        <aura:iteration var="TaggedCourseList" items="{!v.TaggedCourseList}" indexVar="key">                                           
+                                             <c:FSP_Edu_CourseListComponent eachCourseId="{!TaggedCourseList.id}" eachCourseName="{!TaggedCourseList.name}" isInterestedCourse="false"/>
+                                        </aura:iteration>                                        
+                                    </div>                  
+                                 </div>
+                            </div>
+                        </div>   
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+   
+</aura:component>

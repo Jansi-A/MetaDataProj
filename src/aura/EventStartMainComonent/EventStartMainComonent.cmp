@@ -1,0 +1,59 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId,force:appHostable,force:hasSObjectName" 
+                controller="EventRelatedDetails"  >
+    
+    <!--<ltng:require styles="/resource/bootstrapCSS"/>	
+    <ltng:require scripts="/resource/JQuery,/resource/bootstrapJs" afterScriptsLoaded="{!c.doInit}"/> -->
+   <aura:attribute name="isShowEventStartMeetingCmp" type="String" />
+  
+    <aura:attribute name="showDiv" type="String" default="ShowUniversitiesDiv" />
+    <aura:attribute name="eventId" type="String" />
+    <aura:attribute name="selectedUniversityId" type="String" default=""/>
+    <aura:attribute name="selectedCampusId" type="String" default=""/>
+    <aura:attribute name="selectedProgramId" type="String" default=""/>
+    <aura:attribute name="eventfired" type="String"  />
+    <aura:attribute name="universitiesList" type="Universities__c[]"/>
+    <aura:attribute name="searchObj" type="String"  />
+    <aura:attribute name="searchText" type="String"/>
+    <aura:attribute name="showEventRelatedLink" type="String" default="no"/>
+    
+   
+    <aura:attribute name="courseName" type="String"  />
+    <aura:attribute name="courseId" type="String"/>
+    <aura:attribute name="leadId" type="String"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doinit}" /> 
+    <aura:handler event="c:SearchEvent" action="{!c.handleSearchEvent}"/>
+    <aura:handler event="c:ApplicationCreationEvent" action="{!c.handleAppCreationEvent}"/>
+    
+      
+    <c:EducationSearchComponent />
+    
+    <table><tr><td>&nbsp;&nbsp;</td></tr></table>
+    
+    <aura:if isTrue="{!v.showEventRelatedLink=='yes'}">
+        <table><tr><td style="text-align: right;"><a href="javascript:void(0);" onclick="{!c.showEventRelatedUniversities}"> Event Related Universities</a></td></tr></table>
+    </aura:if>
+     
+    
+     <table><tr><td>&nbsp;&nbsp;</td></tr></table>
+    
+      <aura:if isTrue="{!v.showDiv=='ShowUniversitiesDiv'}">
+  		<c:listOfUniversitiesComponent eventId="{!v.eventId}" showDiv="{!v.showDiv}" selectedUniversityId="{!v.selectedUniversityId}" searchObj="{!v.searchObj}" searchText="{!v.searchText}"/>
+     </aura:if>
+     <aura:if isTrue="{!v.showDiv=='ShowCampusesDiv'}">
+  		<c:listOfUniversityCampusesComponent eventId="{!v.eventId}" showDiv="{!v.showDiv}" selectedUniversityId="{!v.selectedUniversityId}" selectedCampusId="{!v.selectedCampusId}" />
+    </aura:if>
+    <aura:if isTrue="{!v.showDiv=='ShowProgramsDiv'}">
+        <c:listOfProgramsComponent eventId="{!v.eventId}" showDiv="{!v.showDiv}" selectedProgramId="{!v.selectedProgramId}" selectedCampusId="{!v.selectedCampusId}" />
+    </aura:if>
+    <aura:if isTrue="{!v.showDiv=='ShowProgramDetailsDiv'}">
+                      <c:programDetailsComponent eventId="{!v.eventId}" showDiv="{!v.showDiv}" selectedProgramId="{!v.selectedProgramId}" />
+    </aura:if>
+    
+     <aura:if isTrue="{!v.showDiv=='ShowApplicationCreationDiv'}">
+                      <c:ApplicationCreationComponentForm courseName="{!v.courseName}" courseId="{!v.courseId}" leadId="{!v.leadId}" />
+    </aura:if>
+          
+
+
+</aura:component>

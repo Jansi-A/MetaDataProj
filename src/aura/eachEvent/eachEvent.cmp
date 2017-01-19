@@ -1,0 +1,27 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId,force:appHostable" 
+                controller="EventRelatedDetails" >
+
+    <aura:attribute name="event" type="Event"/>
+    <aura:attribute name="isShowEventDetails" type="String"  />
+    <aura:attribute name="selectedEvent" type="Event"/>
+    <aura:attribute name="isShowEventStartMeetingCmp" type="String" />
+    <aura:attribute name="eventId" type="String" />
+    <aura:attribute name="leadName" type="String" />
+  <aura:handler name="init" value="{!this}" action="{!c.doInit}" /> 
+    
+    
+    
+    <aura:if isTrue="{!v.isShowEventDetails=='false'}">
+           <tr>
+                <td scope="row"><a href="javascript:void(0);"  onclick="{!c.navigateToRecordDetail}" >{!v.event.Subject}</a></td>                 
+        		<td>{!v.event.StartDateTime}</td>
+    			<!--<td>{!v.event.EndDateTime}</td> -->
+               <td>{!v.leadName}</td>
+     			<!--<td>{!v.event.Description}</td> -->
+                <td><ui:button label="Start Meeting" press="{!c.startMeeting}" /> </td>
+           </tr>
+     
+    </aura:if>
+
+    
+</aura:component>

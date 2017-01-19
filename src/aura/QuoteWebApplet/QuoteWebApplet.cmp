@@ -1,0 +1,51 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId,force:appHostable" controller="customMeetingControllerNew" >
+ <aura:attribute name="recordId" type="Id" />
+
+    
+   <ui:button aura:id="button" buttonTitle="Click to see what you put into the field" class="button" label="Create Quote" press="{!c.myAction}"/>
+<table
+	class="slds-table slds-table--bordered slds-table--striped slds-table--cell-buffer">
+
+	<thead>
+
+		<tr class="slds-text-heading--label">
+
+			<th scope="col"><span class="slds-truncate">Download</span></th>
+
+			<th scope="col"><span class="slds-truncate">Email</span></th>
+
+			<th scope="col"><span class="slds-truncate">Quote Name</span></th>
+
+			<th scope="col"><span class="slds-truncate">Quote Value</span></th>
+
+			<th scope="col"><span class="slds-truncate">Division</span></th>
+
+			<th scope="col"><span class="slds-truncate">Update
+			Revenue</span></th>
+
+
+		</tr>
+
+	</thead>
+
+	<tbody>
+		<tr>
+
+			<td>Download</td>
+
+			<td>Email</td>
+
+			<td>1234</td>
+
+			<td>Custom Quote 1</td>
+
+			<td>$900.00</td>
+
+			<td>US</td>
+
+			<td>Update</td>
+		</tr>
+	</tbody>
+
+</table>  
+</aura:component>

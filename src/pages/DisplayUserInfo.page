@@ -1,0 +1,10 @@
+<apex:page >
+        {! $User.FirstName }
+        <apex:pageBlock >
+            <apex:form >
+           {! $User.FirstName }
+                 
+            </apex:form>
+        </apex:pageBlock>
+    
+</apex:page>

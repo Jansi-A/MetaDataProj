@@ -1,0 +1,2 @@
+<apex:page Standardcontroller="Application__c" extensions="PDFController" action="{!savePdf}" >
+</apex:page>

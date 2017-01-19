@@ -1,0 +1,3 @@
+<aura:component implements="flexipage:availableForAllPageTypes" >
+	This is my new Change in the Branch to see
+</aura:component>

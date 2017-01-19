@@ -1,0 +1,60 @@
+<aura:component implements="flexipage:availableForAllPageTypes" controller="EventRelatedDetails">
+    
+     <aura:attribute name="UniversitySearchRecords" type="Universities__c[]" />
+     <aura:attribute name="CampusSearchRecords" type="Campus__c[]" />
+     <aura:attribute name="ProgramSearchRecords" type="Program__c[]" />
+     <aura:registerEvent name="searchEvent" type="c:SearchEvent"/>
+    
+    <div> 
+		
+            <div style="width: 80%; float: left;">                
+                	<ui:inputText aura:id="searchTextBoxId" value="" placeholder="Search..."/>
+        	</div>         
+        	<div style="width: 10%; float: left;"> 
+                <ui:inputSelect aura:id="searchSelectBoxId" class="searchElementHeight">
+                    <ui:inputSelectOption text="University" value="University"/>
+                    <ui:inputSelectOption text="Campus" value="Campus"/>
+                    <ui:inputSelectOption text="Program" value="Program"/>
+                </ui:inputSelect>
+        	</div>        
+           <div style="width: 10%; float: left;">            
+            	<ui:button aura:id="button" buttonTitle="Click to perform the search" class="searchElementHeight" label="Search" press="{!c.searchData}"/>
+       	   </div>         
+    </div>
+    
+    
+    <div>
+        <p aura:id="NoDataFoundId" class="hideElement">No records found..</p>    	
+    </div>
+    
+        <div>
+        	<table>
+                <aura:iteration var="UniversityItem" items="{!v.UniversitySearchRecords}">
+                    <!--<tr  style="border: solid;  border-width: 1px;">                       
+                        <td style="border: solid;  border-width: 1px;width: 20%;">{!UniversityItem.Id}</td>
+                       <td  style="border: solid;  border-width: 1px;width: 80%;">{!UniversityItem.Name}</td>
+                    </tr> -->           
+                </aura:iteration>
+            </table>        
+        
+            <table>
+                <aura:iteration var="CampusItem" items="{!v.CampusSearchRecords}">
+                    <tr  style="border: solid;  border-width: 1px;">                       
+                        <td style="border: solid;  border-width: 1px;width: 20%;">{!CampusItem.Id}</td>
+                       <td  style="border: solid;  border-width: 1px;width: 80%;">{!CampusItem.Name}</td>
+                    </tr>            
+                </aura:iteration>
+            </table>        
+        	
+        	<table>
+                <aura:iteration var="ProgramItem" items="{!v.ProgramSearchRecords}">
+                    <tr  style="border: solid;  border-width: 1px;">                       
+                        <td style="border: solid;  border-width: 1px;width: 20%;">{!ProgramItem.Id}</td>
+                       <td  style="border: solid;  border-width: 1px;width: 80%;">{!ProgramItem.Name}</td>
+                    </tr>            
+                </aura:iteration>
+            </table>           
+    
+    </div>
+    
+</aura:component>

@@ -1,0 +1,28 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId" controller="customMeetingController">
+	<aura:attribute name="rowId" type="String" default="{!v.recordId}"/>
+    <aura:attribute name="listOfOppty" type="Opportunity[]"/>
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="meetingIntRowIdContact" type="String" default=""/>
+    <table class="slds-table slds-table--bordered slds-table--striped">
+        <thead>
+            <tr class="slds-text-heading--label">
+                <th class="slds-cell-shrink">
+                     <label> <!--class="slds-checkbox"> -->
+                        <!--<input type="checkbox" name="Add" /> -->
+                        <span class="slds-checkbox--faux"></span>
+                        <!--<span class="slds-assistive-text">Select All</span> -->
+                    </label> 
+                </th>
+                <th class="slds-is-sortable slds-is-resizable" scope="col">Opportunity Name</th>
+                <th class="slds-is-sortable slds-is-resizable" scope="col">Opportunity Id</th>
+        	</tr>
+        </thead>        
+        <aura:iteration var="item" items="{!v.listOfOppty}">
+            <tr>
+                <td><ui:outputURL value="{!item.Id}" label="Add"/></td>
+            	<td>{!item.Name}</td>
+                <td>{!item.Id}</td>
+        	</tr>        	
+    	</aura:iteration>
+    </table>
+</aura:component>

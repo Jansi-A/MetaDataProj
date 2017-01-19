@@ -1,0 +1,45 @@
+<apex:page standardController="Event" extensions="eventControllerExtension" >
+    <apex:outputPanel rendered="{! $User.UIThemeDisplayed == 'Theme3' }">
+    <apex:outputText value="This is Salesforce Classic."/>
+    <apex:outputText value="These are multiple components wrapped by an outputPanel."/>
+</apex:outputPanel>
+
+    
+    {!$User.UIThemeDisplayed}
+    {!$User.UITheme}
+<apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection >
+                Name:<input type="text" name='jansi' />
+                <input id="theHiddenInput" type="hidden" name="theHiddenInput" value="{!currentRecordId}"/>
+                
+            </apex:pageBlockSection>
+       </apex:pageBlock> 
+</apex:form>
+<apex:outputPanel rendered="{! $User.UIThemeDisplayed == 'Theme4d' }">
+    <apex:outputText value="Everything is simpler in Lightning Experience. kkkkkkkkkkkkkkkkkkkkk"/>
+        <!--  Including Lightning Component START-->
+    
+    <apex:includeScript value="/lightning/lightning.out.js" />
+
+    <script>
+        $Lightning.use("c:EventStartMainComonentApp", function() {
+            $Lightning.createComponent(
+                "c:EventStartMainComonent",
+                {"eventId" : "{!currentRecordId}"},
+                
+                "theuploadDiv",
+                function(cmp) {
+                    console.log("Component created!");
+                    console.log(cmp);
+                });
+            });
+    </script>
+    
+    <div id="theuploadDiv"></div>
+    
+     <!--  Including Lightning Component END-->
+</apex:outputPanel>    
+
+
+</apex:page>

@@ -1,0 +1,83 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId,force:appHostable" controller="ApplicationCreationApex" >    
+    
+    <ltng:require styles="/resource/SLDS090/assets/styles/salesforce-lightning-design-system.css"/>
+	<ltng:require styles="/resource/SLDS090/assets/styles/salesforce-lightning-design-system.min.css"/>
+	<ltng:require styles="/resource/SLDS090/assets/styles/salesforce-lightning-design-system-ltng.css"/>
+	<ltng:require styles="/resource/SLDS090/assets/styles/salesforce-lightning-design-system-ltng.min.css"/>
+	<ltng:require styles="/resource/SLDS090/assets/styles/salesforce-lightning-design-system-scoped.css"/>
+	<ltng:require styles="/resource/SLDS090/assets/styles/salesforce-lightning-design-system-scoped.min.css"/>
+	<ltng:require styles="/resource/SLDS090/assets/styles/salesforce-lightning-design-system-vf.css"/>
+	<ltng:require styles="/resource/SLDS090/assets/styles/salesforce-lightning-design-system-vf.min.css"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+     <aura:attribute name="courseName" type="String" />
+    <aura:attribute name="courseId" type="String" />
+
+    <aura:attribute name="leadId" type="String" />
+    <aura:attribute name="AttachmentCounter" type="Integer" default="1"/>
+    
+    
+    
+    <div class="container">
+        <form class="slds-form--stacked">
+            
+            	 <div class="slds-form-element" >
+                    <div class="slds-form-element__control">
+                        <ui:inputText aura:id="applicationName" placeholder="Application Name"
+                                      class="slds-input"  value="" />
+                    </div>
+                </div>  
+                <div class="slds-form-element slds-is-disabled" >
+                    <div class="slds-form-element__control">
+                        <ui:outputText aura:id="courseName" 
+                                       class="slds-input"  value="{!v.courseName}"/>
+                    </div>
+                </div>        
+                <div class="slds-form-element slds-is-required">
+                    <div class="slds-form-element__control">
+                        
+                        <div aura:id="AddAttachmentElementsHere">
+                        	
+                            
+                            <input aura:id="application_attachment_1" type="file" 
+                                        class="slds-input" multiple="true"
+                                        labelClass="slds-form-element__label"
+                                        value=""
+                                        required="true"/> 
+                            
+                           <!-- <input aura:id="application_attachment_2" type="file" 
+                                        class="slds-input"
+                                        labelClass="slds-form-element__label"
+                                        value=""
+                                        required="true"/> -->
+                            
+                            
+                        </div>                          
+                        
+                     </div>
+                </div>       
+                <div class="slds-form-element">
+                    <ui:button label="Add Attachment" 
+                               class="slds-button slds-buttonneutral"
+                               labelClass="label"
+                               press="{!c.addAnotherAttachment}"/>
+                    <ui:button label="Create" 
+                               class="slds-button slds-button--neutral"
+                               labelClass="label"
+                               press="{!c.createApplication}"/>
+                   
+                </div>        
+        </form>
+        
+         <div class="spinnerContainer" aura:id="spinnerDivId">
+             <center><ui:spinner aura:id="spinner" class="spinnerCls "/></center>
+       	 </div>
+        
+  </div>
+   
+    
+   <!-- <img src="{!$Resource.ring}" style="max-width: 100%;height:auto;"/>-->
+
+
+    
+</aura:component>

@@ -1,0 +1,303 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+ 
+    <style>
+    
+    .slds-section-title--divider{font-weight: bold;
+    font-size: large;}
+        
+      .oppProdRecordTab tbody{font-size: smaller;}
+        .slds-form-element__label{font-size: larger;}
+    
+    </style>
+
+    
+  <div class="slds-page-header" role="banner">
+      <div class="slds-media slds-media--center">
+        <div class="slds-media__figure">
+          <lightning:icon iconName="action:log_event" size="medium" alternativeText="Customers"/>
+        </div>
+        <div class="slds-media__body">
+         <h1 class="slds-page-header__title slds-m-right--small slds-align-middle slds-truncate" title="this should match the Record Title">Preview Meeting</h1>
+        </div>
+		<div class="slds-media__figure slds-media__figure--reverse">
+			<div class="slds-button-group" role="group">
+              <button class="slds-button slds-button--neutral">Continue Meeting</button>
+              <button class="slds-button slds-button--neutral"  onclick="{!c.navigateToMeeting}">End Meeting</button>
+            </div>
+      </div>
+      </div>
+	</div>  
+ 
+    
+ <div class="slds-p-top--medium"> 
+ <table>
+            <tr>
+                <td>
+                    <div class="slds-form-element">
+                        <div class="slds-form-element__control">
+                             <label class="slds-form-element__label" for="text-input-01">Opporunity Name</label>
+  <div class="slds-form-element__control slds-size--3-of-4">
+    <input id="text-input-01" class="slds-input" type="text" placeholder="Opportunity from Inverters
+" />
+  </div>
+                        </div>
+                    </div> 
+                </td>
+                <td>
+                 <div class="slds-form-element">
+                        <div class="slds-form-element__control">
+                             <label class="slds-form-element__label" for="text-input-01">Quote</label>
+  <div class="slds-form-element__control slds-size--3-of-4">
+    <input id="text-input-01" class="slds-input" type="text" placeholder="Quote for Inverters" />
+  </div>
+                        </div>
+                    </div> 
+                </td>  
+            </tr>
+        </table>  
+    </div>
+     
+ <div class="slds-p-top--small">
+   <article class="slds-card">
+  <div class="slds-card__header slds-grid">
+    <header class="slds-media slds-media--center slds-has-flexi-truncate">
+      <div class="slds-media__figure">
+        <lightning:icon iconName="standard:product" size="medium" alternativeText="Product"/>
+      </div>
+      <div class="slds-media__body slds-truncate">
+        <h2>
+          <a href="javascript:void(0);" class="slds-text-link--reset">
+            <span class="slds-text-heading--small">Products</span>
+          </a>
+        </h2>
+      </div>
+    </header>
+    
+  </div>
+  <div class="slds-card__body">
+ 
+ 
+  <table class="slds-table slds-table--bordered slds-table--fixed-layout oppProdRecordTab" role="grid">
+  <thead>
+    <tr class="slds-text-title--caps">
+      <th scope="col" style="width:300px;">
+          
+         
+      
+       
+        <div class="slds-truncate " title="Opportunity Name">Products Name</div>
+      </th>
+        
+        
+        
+      <th scope="col">
+        <div class="slds-truncate" title="Account Name">Sample</div>
+      </th>
+      <th scope="col">
+        <div class="slds-truncate" title="Close Date">Opportunity</div>
+      </th>
+      <th scope="col">
+        <div class="slds-truncate" title="Stage">Quote</div>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row" data-label="Opportunity Name">
+        <div class="slds-truncate" title="Cloudhub">Data Switcher OpportunityData Switcher OpportunityData Switcher Opportunity</div>
+      </th>
+      <td role="gridcell" data-label="Account Name">
+          <div class="slds-size--1-of-2">
+        <input id="text-input-01" style="border:none;text-align: center;" class="slds-input" type="text"  />
+          </div>
+      </td>
+      <td role="gridcell" data-label="Close Date">
+         <div class="slds-size--1-of-2">
+        <input id="text-input-01" style="border:none;text-align: center;" value="2" class="slds-input" type="text"  />
+          </div>
+      </td>
+      <td role="gridcell" data-label="Prospecting">
+      <div class="slds-size--1-of-2">
+        <input id="text-input-01" style="border:none;text-align: center;" class="slds-input" type="text"  />
+          </div>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row" data-label="Opportunity Name">
+        <div class="slds-truncate" title="Cloudhub + Anypoint Connectors">Relay Controller OpportunityData Switcher Opportunity</div>
+      </th>
+      <td role="gridcell" data-label="Account Name">
+        <div class="slds-size--1-of-2">
+        <input id="text-input-01"  style="border:none;text-align: center;" value="3" class="slds-input" type="text"  />
+          </div>
+      </td>
+      <td role="gridcell" data-label="Close Date">
+       <div class="slds-size--1-of-2">
+        <input id="text-input-01"  style="border:none;text-align: center;" class="slds-input" type="text"  />
+          </div>
+      </td>
+      <td role="gridcell" data-label="Prospecting">
+        <div class="slds-size--1-of-2">
+        <input id="text-input-01" style="border:none;text-align: center;" class="slds-input" type="text"  />
+          </div>
+      </td>
+      
+    </tr>
+      
+       <tr>
+      <th scope="row" data-label="Opportunity Name">
+        <div class="slds-truncate" title="Cloudhub + Anypoint Connectors">Server Sharer OpportunityData Switcher Opportunity</div>
+      </th>
+      <td role="gridcell" data-label="Account Name">
+        <div class="slds-size--1-of-2">
+        <input id="text-input-01"  style="border:none;text-align: center;" class="slds-input" type="text"  />
+          </div>
+      </td>
+      <td role="gridcell" data-label="Close Date">
+       <div class="slds-size--1-of-2">
+        <input id="text-input-01"  style="border:none;text-align: center;" class="slds-input" type="text"  />
+          </div>
+      </td>
+      <td role="gridcell" data-label="Prospecting">
+        <div class="slds-size--1-of-2">
+        <input id="text-input-01" style="border:none;text-align: center;"  value="2" class="slds-input" type="text"  />
+          </div>
+      </td>
+      
+     
+    </tr>
+      
+       <tr>
+      <th scope="row" data-label="Opportunity Name">
+        <div class="slds-truncate" title="Cloudhub + Anypoint Connectors">Edge Emergency GeneratorData Switcher Opportunity
+</div>
+      </th>
+      <td role="gridcell" data-label="Account Name">
+        <div class="slds-size--1-of-2">
+        <input id="text-input-01"  style="border:none;text-align: center;" class="slds-input" type="text"  />
+          </div>
+      </td>
+      <td role="gridcell" data-label="Close Date">
+       <div class="slds-size--1-of-2">
+        <input id="text-input-01"  style="border:none;text-align: center;" value="4" class="slds-input" type="text"  />
+          </div>
+      </td>
+      <td role="gridcell" data-label="Prospecting">
+        <div class="slds-size--1-of-2">
+        <input id="text-input-01" style="border:none;text-align: center;" class="slds-input" type="text"  />
+          </div>
+      </td>
+      
+     
+    </tr>
+      
+       <tr>
+      <th scope="row" data-label="Opportunity Name">
+        <div class="slds-truncate" title="Cloudhub + Anypoint Connectors">GenePoint Lab GeneratorsData Switcher Opportunity
+</div>
+      </th>
+      <td data-label="Account Name">
+        <div class="slds-size--1-of-2">
+        <input id="text-input-01"  style="border:none;text-align: center;" value="2" class="slds-input" type="text"  />
+          </div>
+      </td>
+      <td data-label="Close Date">
+       <div class="slds-size--1-of-2">
+        <input id="text-input-01"  style="border:none;text-align: center;" class="slds-input" type="text"  />
+          </div>
+      </td>
+      <td data-label="Prospecting">
+        <div class="slds-size--1-of-2">
+        <input id="text-input-01" style="border:none;text-align: center;" class="slds-input" type="text"  />
+          </div>
+      </td>
+      
+     
+    </tr>
+  </tbody>
+</table>   
+ 
+ 
+ 
+ 
+ 
+ 
+  </div>
+ <div class="slds-card__footer" style="display:block"></div>
+</article>   
+
+    </div>      
+    
+    
+    
+    
+    
+    
+    
+  <div class="slds-p-top--small">
+    <div class="slds-form-element">
+        <div class="slds-form-element__control">
+            <label class ="slds-form-element__label">Internal Comments</label>
+            
+            <div class="slds-form-element__control">
+                <textarea id="textarea-input-01" style="height:100px" class="slds-textarea" placeholder="Enter your notes here"></textarea>
+            </div>
+        </div>
+    </div>
+    </div>  
+    
+    <div class="slds-p-top--small">
+ <form class="slds-form--inline">
+  <div class="slds-form-element">
+     <label class ="slds-form-element__label">External Comments</label>
+    
+  </div>
+  <div class="slds-form-element slds-float--right">
+  <label class="slds-checkbox--toggle slds-grid">
+    <span class="slds-form-element__label slds-m-bottom--none">MoM</span>
+    <input name="checkbox" type="checkbox" aria-describedby="toggle-desc" />
+    <span id="toggle-desc" class="slds-checkbox--faux_container" aria-live="assertive">
+      <span class="slds-checkbox--faux"></span>
+      <span class="slds-checkbox--on">Enabled</span>
+      <span class="slds-checkbox--off">Disabled</span>
+    </span>
+  </label>
+</div>    
+  
+</form>
+        <div class="slds-form-element__control">
+                <textarea id="textarea-input-01" style="height:100px" class="slds-textarea" placeholder="Enter your notes here"></textarea>
+            </div>
+    </div>  
+    
+  
+
+     
+    
+    
+      
+    
+  
+    
+    
+ 
+   
+<!--    
+ <table class="slds-table " width="100%">
+        <tr> 
+            <td style="width: 100px; height: 50px; border: 1px ;color:black ">
+                <div style="width: 100%; height: 100%;">
+                    <button class="slds-button slds-button-neutral" style="width: 100%; height: 100%;">Continue Meeting
+                    </button>
+                </div>
+            </td>
+            <td style="width: 100px; height: 50px; border: 1px ">
+                <div style="width: 100%; height: 100%;">
+                    <button class="slds-button slds-button-neutral" style="width: 100%; height: 100%;">End Meeting
+                    </button>
+                </div>
+            </td>
+        </tr>
+    </table>    -->
+    
+</aura:component>

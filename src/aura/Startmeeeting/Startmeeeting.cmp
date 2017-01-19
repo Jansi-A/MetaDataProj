@@ -1,0 +1,21 @@
+<aura:component >
+    <aura:attribute name="meetingInternRoId" type="String" default="a082800000T9lwwAAB"/>
+    <aura:attribute name="meeting" type="Meeting__c" default="{ 'sobjectType': 'Meeting__c' }"/>
+    <aura:attribute name="meetingInternal" type="Meeting_Internal__c" default="{ 'sobjectType': 'Meeting_Internal__c' }"/>
+<div style="width:100%;"> <!-- Main Div -->
+        Meeting Detail Component<br/><br/>
+<div style="float:left; width:40%;height: 100%;">
+    <div>
+        <!--<c:RelatedComponents meetingRoId="{!v.meeting.Id}"/>-->
+        <c:RelatedMeetingComponents meetingInternalRoId="{!v.meetingInternRoId}"/>
+    </div>
+</div>
+<div style="float:left; width:30%;height: 100%;">
+    Note Section
+</div>
+<div style="float:left; width:30%;height: 100%;">
+Additional Fields
+</div>
+</div>
+ 
+</aura:component>

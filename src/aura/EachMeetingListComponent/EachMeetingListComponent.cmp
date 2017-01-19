@@ -1,0 +1,15 @@
+<aura:component >
+    
+	<aura:attribute name="eachMeeting" type="Meeting__C"/>
+    <aura:attribute name="isViewMeetingParam" type="Boolean" />
+    <aura:attribute name="selectedMeetingId" type="String" />
+    <aura:attribute name="selectedMeetingAccountId" type="String" />
+    
+    <aura:registerEvent name="appEvent" type="c:CustomMeetingEvent"/>
+
+    
+    <td><a href="javascript:void(0);"  onclick="{!c.onClick}" >{!v.eachMeeting.Name}</a></td>
+    <td> {!v.eachMeeting.Related_Account__r.Name} </td>
+    
+    <td><ui:button label="Start Meeting" press="{!c.startMeeting}" /> </td>
+</aura:component>

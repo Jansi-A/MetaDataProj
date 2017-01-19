@@ -1,0 +1,210 @@
+<aura:component implements="flexipage:availableForAllPageTypes" >
+    
+	<ltng:require styles="/resource/fsp_bootstrap_css"/>
+    <ltng:require styles="/resource/fsp_dashboard_css"/>
+	<ltng:require styles="/resource/fsp_demo"/>
+    <ltng:require styles="/resource/fsp_font_awesome_min"/>
+    <ltng:require styles="/resource/fsp_fonts_googleapis_css"/>
+    <ltng:require styles="/resource/fsp_pe_icon_7_stroke"/>
+    <ltng:require styles="/resource/component_css"/>
+    <ltng:require scripts="/resource/JQuery,/resource/FSP_bootstrapJs,/resource/moment_min_js,
+                           resource/fullcalender_V3_js,/resource/jquery_sharrre_js,resource/demo_js"
+   afterScriptsLoaded="{!c.doInit}" />
+  <!--   <ltng:require scripts="/resource/modernizr_custom_js"  
+                      afterScriptsLoaded="{!c.doInit}" /> -->
+    
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+   
+    <aura:attribute name="courseId" type="String"/>
+
+   
+    <div class="fsp">
+	
+        	<div id="normalModal" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header" style="border-bottom: none !important;">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-hidden="true">&times;</button>
+
+				</div>
+				<div class="modal-body">
+
+					<div class="col-md-6 col-sm-6">
+
+						<div class="card card-user">
+
+							<div class="content">
+								<a href="">
+
+									<h4 class="title text-center">
+                                        <i><img src="../assets/img/photo-camera.png" width="50"></img></i><br></br>
+                                            <br></br>Click a Picture
+									</h4>
+
+
+								</a>
+							</div>
+
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-6">
+
+						<div class="card card-user">
+
+							<div class="content">
+								<a href="">
+
+									<h4 class="title text-center">
+                                        <i><img src="../assets/img/laptop.png" width="50"></img></i><br></br>
+                                            <br></br>Choose from Existing
+									</h4>
+
+
+								</a>
+							</div>
+
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="form-group">
+							<label>Name of the Certificate</label> <input
+								class="form-control" style="padding: 0px 5px;"
+                                                                          placeholder="Example: Bachlor of Business" type="text"></input>
+
+						</div>
+					</div>
+
+				</div>
+				<div class="modal-footer" style="border-top: none !important;">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+					<button type="button" class="btn btn-primary">Upload</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+
+	<div class="wrapper">
+
+
+		<div class="main-panel">
+
+			<div class="content">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-2 col-sm-1">
+							<a href="homepage.html"><img
+                                                         src="../assets/img/left-arrow.png" width="32"></img></a>
+
+						</div>
+
+					</div>
+					<div class="row">
+
+
+						<div class="chute chute-center">
+
+						
+							<div class="panel">
+
+
+								<div class="panel-body pn">
+
+									<div class="">
+										<div class="col-md-12">
+											<h3>Certificates</h3>
+                                            <br></br>
+
+
+
+										</div>
+
+
+									</div>
+									<div class="">
+										<div
+											class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+											<div class="font-icon-detail">
+                                                <i class=""><img src="/resource/certificate_1_jpg"
+                                                                 width="100%"></img></i>
+												<h4 style="margin: 20px 0px; text-align: center;">Bachelors
+													of commerce</h4>
+											</div>
+
+										</div>
+										<div
+											class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+											<div class="font-icon-detail">
+												<i class=""><img src="/resource/certificate_1_jpg"
+                                                                 width="100%"></img></i>
+												<h4 style="margin: 20px 0px; text-align: center;">Bachelors
+													of commerce</h4>
+											</div>
+
+										</div>
+										<div
+											class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+											<div class="font-icon-detail">
+												<i class=""><img src="/resource/certificate_1_jpg"
+                                                                 width="100%"></img></i>
+												<h4 style="margin: 20px 0px; text-align: center;">Bachelors
+													of commerce</h4>
+											</div>
+
+										</div>
+										<div
+											class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+											<div class="font-icon-detail">
+												<i class=""><img src="/resource/certificate_1_jpg"
+                                                                 width="100%"></img></i>
+												<h4 style="margin: 20px 0px; text-align: center;">Bachelors
+													of commerce</h4>
+											</div>
+
+										</div>
+										<div
+											class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+											<div class="font-icon-detail">
+												<i class=""><a data-toggle="modal" href="#normalModal"><img
+                                                                                                            src="../assets/img/add_cerificate.jpg" width="100%"></img></a></i>
+
+												<h4 style="margin: 20px 0px; text-align: center;">Add
+													Certificate</h4>
+											</div>
+
+										</div>
+
+
+									</div>
+
+
+
+								</div>
+
+							</div>
+
+						</div>
+
+
+					</div>
+
+
+
+
+
+
+
+
+
+				</div>
+			</div>
+	
+
+    </div>    
+        </div></div>
+</aura:component>

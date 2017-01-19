@@ -1,0 +1,19 @@
+.THIS {
+}
+.THIS .card-user .avatar {
+    width: 214px;
+    height: 74px;
+    border: 5px solid #FFFFFF;
+    position: relative;
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+.THIS .card .avatar {
+    
+    overflow: hidden;
+    border-radius: 0%;
+    margin-right: 5px;
+}
+.THIS .main-panel{
+	width:100%;
+}

@@ -1,0 +1,10 @@
+<aura:component >
+<aura:attribute name="myBool" type="Boolean" default="true"/>
+<ui:inputCheckbox aura:id="checkbox" label="Select?" />
+    <ui:inputCheckbox aura:id="checkbox" label="Selectsds?" />
+<p>Selected:</p>
+<p><ui:outputText class="result" aura:id="checkResult" value="false"/></p>
+<p>The following checkbox uses a component attribute to bind its value.</p>
+<ui:outputCheckbox aura:id="output" value="{!v.myBool}"/>
+    <ui:button aura:id="button" buttonTitle="Click" class="button" label="Click me" press="{!c.getInput}"/>
+</aura:component>

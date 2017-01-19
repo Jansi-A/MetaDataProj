@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Festivals</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Festivals</value>
+    </caseValues>
+    <fields>
+        <label><!-- Email Test --></label>
+        <name>Email_Test__c</name>
+    </fields>
+    <fields>
+        <label><!-- Test No --></label>
+        <name>Test_No__c</name>
+    </fields>
+    <layouts>
+        <layout>Festivals Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

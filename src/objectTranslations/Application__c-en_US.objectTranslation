@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Application</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Applications</value>
+    </caseValues>
+    <fields>
+        <label><!-- City --></label>
+        <name>City__c</name>
+    </fields>
+    <fields>
+        <label><!-- Company Name --></label>
+        <name>Company_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- Applications --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Invoice Number --></label>
+        <name>Invoice_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead --></label>
+        <name>Lead__c</name>
+        <relationshipLabel><!-- Applications --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Phone --></label>
+        <name>Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Program --></label>
+        <name>Program__c</name>
+        <relationshipLabel><!-- Applications --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Strret Address --></label>
+        <name>Strret_Address__c</name>
+    </fields>
+    <layouts>
+        <layout>Application Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Genrate PDF --></label>
+        <name>Genrate_PDF</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- PDF --></label>
+        <name>PDF</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- PDF_Classic_Button --></label>
+        <name>PDF_Classic_Button</name>
+    </webLinks>
+</CustomObjectTranslation>

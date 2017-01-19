@@ -1,0 +1,35 @@
+<aura:component implements="flexipage:availableForAllPageTypes" controller="customMeetingControllerNew">
+    <!--aura:handler event="c:MeetingComponentEvent" action="{!c.handleCreateMeetingEvent}"/-->
+	<aura:attribute name="meetingRowIdOppty" type="String" default=""/>
+    <aura:attribute name="listOfOppty" type="Opportunity[]"/>
+    
+	<aura:attribute name="meetingIntRowIdOppty" type="String" default=""/>
+    <aura:attribute name="listOfSelectedOpp" type="String" /> 
+    <aura:attribute name="test" type="String" /> 
+    
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <table class="slds-table slds-table--bordered slds-table--striped">
+        <thead>
+            <tr class="slds-text-heading--label">
+                <th class="slds-cell-shrink">
+                    <label> <!--class="slds-checkbox"> -->
+                        <!-- <input type="checkbox" name="Add"  /> -->
+                        <span class="slds-checkbox--faux"></span>
+                        
+                        
+                    </label>
+                </th>
+                <th class="slds-is-sortable slds-is-resizable" scope="col">Opportunity Name</th>
+                <th class="slds-is-sortable slds-is-resizable" scope="col">Opportunity Id</th>
+        	</tr>
+        </thead>        
+        <aura:iteration var="item" items="{!v.listOfOppty}">
+            <tr>
+                <td><ui:inputCheckbox text="{!item.Id}" change="{!c.onCheck}"/></td>
+            	<td>{!item.Name}</td>
+                <td>{!item.Id}</td>
+        	</tr>        	
+    	</aura:iteration>
+    </table>
+   
+</aura:component>
