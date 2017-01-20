@@ -1,0 +1,27 @@
+<project name="Sample Git Jenkins SF" default="test" basedir="." xmlns:sf="antlib:com.salesforce">
+
+    <property file="build.properties"/>
+    <property environment="env"/>
+
+	  <target name="test">
+	      <!-- Upload/Deploy the contents of the "src" package -->
+	      <sf:deploy username="${sf.username}"
+	      	password="${sf.password}" 
+	      	serverurl="${sf.serverurl}"
+	      	logType="Detail"
+	  	    deployRoot="src" 
+	      	rollbackOnError="true"/>
+		</target>
+
+	  <target name="deployMetaData">
+	      <!-- Upload/Deploy the contents of the "src" package -->
+	      <sf:deploy username="${sf.username}"
+	      	password="${sf.password}" 
+	      	serverurl="${sf.serverurl}"
+	      	logType="Detail"
+	  	    deployRoot="src" 
+	      	rollbackOnError="true"/>
+		</target>
+
+	
+</project>
